@@ -16,16 +16,34 @@ color:  green;
    }
 
 /*  Login Page Header Title */
-.logintitle {
+.loginheadertitle {
         margin: 0px 0px 0px 0px;
         color: #ffffff;
         text-align: center;
         font-family: 'Raleway', sans-serif;
         font-weight: 100;
-        font-size: 20px;
+        font-size: 24px;
         /* font: 24px arial, sans-serif; */
         /* margin-top: 20px; */
 
 }
 
+.loginlogo img{
+        margin: 30px 0px 0px 5px;
+	height: 122px;
+	width: 200px;
+}
+
+/*  Login Page Title */
+.logintitle {
+        margin: 40px 0px 0px 5px;
+        color: #6a747c;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
+        font-size: 22px;
+        /* font: 24px arial, sans-serif; */
+        /* margin-top: 20px; */
+
+}
 
