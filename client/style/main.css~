@@ -1,9 +1,14 @@
-md-tabs-wrapper   {
+md-tabs-wrapperXX   {
 
 }
 
-md-tab-item  {
-width: 50% ;
+md-tab-itemOLD {
+width: 500px !important;
 background-color:  gray ;
 color:  green;
 }
+
+
+   .md-header-items {
+   }
+
