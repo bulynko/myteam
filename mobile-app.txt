@@ -1,0 +1,15 @@
+meteor build ../cloudteam-build --server http://cloudteam.storage2storage.com
+
+
+
+keytool -genkey -alias cloudteam -keyalg RSA -keysize 2048 -validity 10000
+
+
+
+cd ../cloudteam-build/android/
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 release-unsigned.apk  cloudteam
+
+
+
+/home/marcin/Android/Sdk/build-tools/23.0.1/zipalign  -f -v 4 release-unsigned.apk  cloudteam.apk
+

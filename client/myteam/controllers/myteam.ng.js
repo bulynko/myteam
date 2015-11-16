@@ -1,0 +1,16 @@
+angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootScope', '$state', '$location',
+  function($scope, $meteor, $rootScope, $state, $location){
+
+
+    $scope.myteam = $meteor.collection(MyTeam).subscribe('myteam');
+    $scope.teams = $meteor.collection(Teams).subscribe('teams');
+
+    $scope.theproject = 'OVERVIEW';
+    $scope.projectMgmt="MEETINGS";
+    
+  //======================================================================
+
+
+}]);
+
+ 

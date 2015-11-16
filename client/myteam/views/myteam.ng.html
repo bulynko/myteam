@@ -1,0 +1,68 @@
+
+<md-content class="md-padding">
+<div layout="column"  style="padding=20px; color: gray;" >
+
+ <md-tabs md-dynamic-height md-border-bottom   md-selected="selectedIndex" >
+    <md-tab label="Cloud Project"  >
+
+ <center><h1> Welcome Clouders !  </h1></center>
+ <!-- {{  currentUser | displayName }} --> 
+
+      <md-input-container  layout="flex"  > 
+      <label>Project Information</label>   
+      <md-select ng-model="theproject"  > 
+          <md-option ng-repeat="projectInfo in ['OVERVIEW','STATUS','LOCATION']" value="{{ projectInfo }}" >  {{ projectInfo }} </md-option>
+     </md-select>
+   </md-input-container>    
+
+     <div layout="column"    ng-hide= "(  theproject != 'OVERVIEW' ) ">     
+       <a> This  Open Stack project .....   RH + IBM</a>
+     </div>     
+     
+     <div layout="column"    ng-hide= "(  theproject != 'STATUS' ) ">     
+       <a> HW order released,  shipment estimated date 15 Dec 2105</a>
+     </div>    
+     
+     <div layout="column"    ng-hide= "(  theproject != 'LOCATION' ) ">     
+       <a> GBM Cloud  Lab is hosted in EQUINX ....</a>
+     </div>    
+    
+   </md-tab>
+    
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
+    <md-tab label="Team"  >    
+       <h1>  CLOUD TEAM : </h1>
+    </md-tab>
+
+
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
+    <md-tab label="News"  >
+    
+   <md-input-container  layout="flex"  > 
+    <label>Activities</label>   
+      <md-select ng-model="projectMgmt"  > 
+          <md-option ng-repeat="projectActions in ['MEETINGS','TASKS']" value="{{ projectActions }}" >  {{ projectActions }} </md-option>
+     </md-select>
+   </md-input-container>    
+   
+
+     <div layout="column"    ng-hide= "(  projectMgmt != 'MEETINGS' ) ">     
+       <a> No schedule yet ....</a>
+     </div>  
+     <div layout="column"    ng-hide= "(  projectMgmt != 'TASKS' ) ">     
+       <a>  1) Network Workshop preparation </a>
+     </div>          
+       
+    </md-tab>    
+    
+ </md-tabs>
+
+
+ </div>    
+ </md-content >
+ 
+ 
+
+
+ 
+ 
