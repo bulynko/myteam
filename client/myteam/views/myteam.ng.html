@@ -5,7 +5,6 @@
  <md-tabs md-dynamic-height md-border-bottom   md-selected="selectedIndex" >
     <md-tab label="Cloud Project" >
 
- <center><h1> Welcome Clouders !  </h1></center>
  <!-- {{  currentUser | displayName }} --> 
 
       <md-input-container  layout="flex"  > 
@@ -32,13 +31,17 @@
 
     <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
     <md-tab label="News" >
-    
-   <md-input-container  layout="flex"  > 
-    <label>Activities</label>   
-      <md-select ng-model="projectMgmt"  > 
-          <md-option ng-repeat="projectActions in ['MEETINGS','TASKS']" value="{{ projectActions }}" >  {{ projectActions }} </md-option>
-     </md-select>
-   </md-input-container>    
+
+ <md-input-container  layout="flex"  >     
+  <md-radio-group ng-model="projectMgmt" layout="raw" >
+      <div  ng-repeat="projectActions in ['MEETINGS','TASKS']"   layout="column"  >
+      <md-radio-button  ng-value="projectActions"  layout="row" >      
+          {{ projectActions }}   
+      </md-radio-button >      
+      </div>
+ </md-radio-group>    
+   
+ </md-input-container>    
    
    <md-divider ng-if="!$last"></md-divider>
    

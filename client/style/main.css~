@@ -1,0 +1,9 @@
+md-tabs-wrapper   {
+
+}
+
+md-tab-item  {
+width: 50% ;
+background-color:  gray ;
+color:  green;
+}
