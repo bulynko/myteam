@@ -10,7 +10,6 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
     
   //======================================================================
 
-
 }]);
 
  

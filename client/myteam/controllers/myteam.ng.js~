@@ -6,10 +6,9 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
     $scope.teams = $meteor.collection(Teams).subscribe('teams');
 
     $scope.theproject = 'OVERVIEW';
- 
+    $scope.projectMgmt="MEETINGS";
     
   //======================================================================
-
 
 }]);
 

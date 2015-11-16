@@ -3,7 +3,7 @@
 <div layout="column"  style="padding=20px; color: gray;" >
 
  <md-tabs md-dynamic-height md-border-bottom   md-selected="selectedIndex" >
-    <md-tab label="Cloud Project"  >
+    <md-tab label="Cloud Project" >
 
  <center><h1> Welcome Clouders !  </h1></center>
  <!-- {{  currentUser | displayName }} --> 
@@ -11,7 +11,7 @@
       <md-input-container  layout="flex"  > 
       <label>Project Information</label>   
       <md-select ng-model="theproject"  > 
-          <md-option ng-repeat="projectInfo in ['OVERVIEW','STATUS','LOCATION']" value="{{ projectInfo }}" >  {{ projectInfo }} </md-option>
+          <md-option ng-repeat="projectInfo in ['OVERVIEW','STATUS','LOCATION','TEAM']" value="{{ projectInfo }}" >  {{ projectInfo }} </md-option>
      </md-select>
    </md-input-container>    
 
@@ -29,14 +29,9 @@
     
    </md-tab>
     
-    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
-    <md-tab label="Team"  >    
-       <h1>  CLOUD TEAM : </h1>
-    </md-tab>
-
 
     <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
-    <md-tab label="News"  >
+    <md-tab label="News" >
     
    <md-input-container  layout="flex"  > 
     <label>Activities</label>   
@@ -45,7 +40,8 @@
      </md-select>
    </md-input-container>    
    
-
+   <md-divider ng-if="!$last"></md-divider>
+   
      <div layout="column"    ng-hide= "(  projectMgmt != 'MEETINGS' ) ">     
        <a> No schedule yet ....</a>
      </div>  
