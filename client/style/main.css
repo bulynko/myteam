@@ -15,3 +15,17 @@ color:  green;
      width: 99999px;
    }
 
+/*  Login Page Header Title */
+.logintitle {
+        margin: 0px 0px 0px 0px;
+        color: #ffffff;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 100;
+        font-size: 20px;
+        /* font: 24px arial, sans-serif; */
+        /* margin-top: 20px; */
+
+}
+
+
