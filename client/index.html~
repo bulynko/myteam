@@ -7,6 +7,9 @@
 
   <md-toolbar  md-scroll-shrink layout="row" layout-align="start center" layout-padding>
        
+       <md-icon md-svg-src="img/view-headline.svg" aria-label="Icon"></md-icon>
+       
+       
     <span flex> <div align="center">  my team  </div> </span>   
   
     <div class="container"   ng-hide= "(  currentUser.emails[0].address != 'cloudteam@gbmme.com' ) " >   
@@ -16,18 +19,8 @@
 
   </md-toolbar>  <!-- Toolbar -->
 
-<md-sidenav>
-  <form>
-    <md-input-container>
-      <label for="testInput">Label</label>
-      <input id="testInput" md-sidenav-focus type="text">
-    </md-input-container>
-  </form>
-</md-sidenav>
-        
 
   <div ui-view class="container-fluid">   </div> 
    
 </body>
-
 
