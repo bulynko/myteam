@@ -4,29 +4,31 @@
 
  <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always"  md-selected="selectedIndex" >
     <md-tab   >
-        <md-tab-label > Project
-             <md-icon md-svg-src="img/cloud-download.svg"></md-icon>
+        <md-tab-label > Info
+             <md-icon md-svg-src="img/cloud-print-outline.svg"></md-icon>
       </md-tab-label>
     <md-tab-body> 
  <!-- {{  currentUser | displayName }} --> 
 
       <md-input-container  layout="flex"  > 
       <md-select ng-model="theproject"  > 
-          <md-option ng-repeat="projectInfo in ['OVERVIEW','STATUS','LOCATION','TEAM']" value="{{ projectInfo }}" >  {{ projectInfo }} </md-option>
+          <md-option ng-repeat="projectInfo in ['OVERVIEW','LOCATION','TEAM']" value="{{ projectInfo }}" >  {{ projectInfo }} </md-option>
      </md-select>
    </md-input-container>    
 
      <div layout="column"    ng-hide= "(  theproject != 'OVERVIEW' ) ">     
        <a> G-Cloud is based on the most popular OpenSource project namely OpenStack. G-Cloud will use the OpenStack products such as IBM CMO and Red Hat OpenStack Platform. </a>
+     bbb<script src="client/include_data.txt" type="text/javascript"></script>    
      </div>     
-     
-     <div layout="column"    ng-hide= "(  theproject != 'STATUS' ) ">     
-       <a> HW order released,  shipment estimated date 15 Dec 2105</a>
-     </div>    
+      
      
      <div layout="column"    ng-hide= "(  theproject != 'LOCATION' ) ">     
        <a> GBM Cloud  Lab is hosted in EQUINX ....</a>
      </div>    
+    
+     <div layout="column"    ng-hide= "(  theproject != 'TEAM' ) ">     
+       <a> GBM Cloud  Team ....</a>
+     </div>       
     
    </md-tab-body> 
    </md-tab>
@@ -34,14 +36,14 @@
 
     <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
     <md-tab  >
-      <md-tab-label> News
-             <md-icon md-svg-src="img/cloud-print-outline.svg"></md-icon>
+      <md-tab-label> Project
+             <md-icon md-svg-src="img/cloud-download.svg"></md-icon>
         </md-tab-label>
       <md-tab-body>
 
  <md-input-container  layout="flex"  >     
   <md-radio-group ng-model="projectMgmt" layout="raw" >
-      <div  ng-repeat="projectActions in ['MEETINGS','TASKS']"   layout="column"  >
+      <div  ng-repeat="projectActions in ['MEETINGS','TASKS','STATUS']"   layout="column"  >
       <md-radio-button  ng-value="projectActions"  layout="row" >      
           {{ projectActions }}   
       </md-radio-button >      
@@ -58,6 +60,9 @@
      <div layout="column"    ng-hide= "(  projectMgmt != 'TASKS' ) ">     
        <a>  1) Network Workshop preparation </a>
      </div>          
+     <div layout="column"    ng-hide= "(  projectMgmt != 'STATUS' ) ">     
+       <a> HW order released,  shipment estimated date 15 Dec 2105</a>
+     </div>        
       
     </md-tab-body> 
     </md-tab>    
