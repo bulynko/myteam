@@ -1,18 +1,10 @@
-md-tabs-wrapperXX   {
 
+md-tab-item {
+    background: #f0f0f0;
+    color: #6f2a8e !important; 
+    border: 1px solid #e1e1e1; 
 }
 
-md-tab-itemXXX {
-background-color:  gray ;
-color:  green;
-}
-
-
-   .md-header-itemsXXX {
-     width: 100%;
-     height: 100%;
-     width: 99999px;
-   }
 
 /*  Login Page Header Title */
 .loginheadertitle {
@@ -45,4 +37,5 @@ color:  green;
         /* margin-top: 20px; */
 
 }
+
 
