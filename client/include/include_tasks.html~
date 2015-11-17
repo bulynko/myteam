@@ -1,0 +1,8 @@
+  <md-whiteframe ng-repeat="t in teamtasks" class="md-whiteframe-z3" layout 
+   layout-align="center center"  style="margin: 3px ; padding: 5px;">  
+   
+     <div>    <h3> {{ t.name }} </h3>   </div>    
+     <span flex></span>  
+     <div  align="right"  >  {{ t.status }}   </div>
+
+   </md-whiteframe>  

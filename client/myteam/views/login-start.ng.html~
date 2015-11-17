@@ -5,6 +5,9 @@
           
 <form>
 
+<a class="loginlogo" href="/login"> <img src="img/login-page-logo.png"/> </a>
+<b class="logintitle">Sign in to G-Cloud </b>
+
     <md-input-container  style="padding: 20px">
       <label>Access Code</label>
       <input ng-model="myuser.code" type="password">
@@ -20,4 +23,6 @@
     </md-input-container>
     
 </form>  
+
+
 </div>

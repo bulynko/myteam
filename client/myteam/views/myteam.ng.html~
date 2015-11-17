@@ -21,12 +21,12 @@
      </div>     
       
      
-     <div layout="column"    ng-hide= "(  theproject != 'LOCATION' ) ">     
-       <a> G-Cloud  Lab is hosted in EQUINX Dubai (International Media Product Zone).<a href="https://www.google.ae/maps/place/Equinix/@25.0266377,55.1844717,17z/data=!4m7!1m4!3m3!1s0x3e5f6d9f30c78e37:0xa9f936c5035fd579!2sEquinix!3b1!3m1!1s0x3e5f6d9f30c78e37:0xa9f936c5035fd579?hl=en">Open in Google Maps</a> </a> <a class="equinixlogo"> <img src="img/equinix-logo.png"/> </a> <a class="datacenterlogo"> <img src="img/data-center.png"/> </a>
-     </div>    
+     <div layout="column"    ng-hide= "(  theproject != 'LOCATION' ) ">   
+       <div ng-app="" ng-include="'client/include/include_location.html'"></div>
+       </div>    
     
      <div layout="column"    ng-hide= "(  theproject != 'TEAM' ) ">     
-       <a> GBM Cloud  Team ....</a>
+       <div ng-app="" ng-include="'client/include/include_team.html'"></div>
      </div>       
     
    </md-tab-body> 
@@ -59,8 +59,8 @@
      <div layout="column"    ng-hide= "(  projectMgmt != 'TASKS' ) ">     
         <div ng-app="" ng-include="'client/include/include_tasks.html'"></div>
      </div>          
-     <div layout="column"    ng-hide= "(  projectMgmt != 'STATUS' ) ">     
-      
+     
+     <div layout="column"    ng-hide= "(  projectMgmt != 'STATUS' ) ">        
        <div ng-app="" ng-include="'client/include/include_status.html'"></div>
      </div>        
       

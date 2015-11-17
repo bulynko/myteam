@@ -1,2 +1,9 @@
-<h1> Test ...</h1> 
- <a> IBM HW order released,  shipment estimated date 15 Dec 2105</a>
+
+  <md-whiteframe ng-repeat="p in [ p1, p2  ]" class="md-whiteframe-z3" layout 
+   layout-align="center center"  style="margin: 3px ; padding: 5px;">  
+   
+     <div>    <h3> {{ p.phasename }} </h3> -  </div>    
+     <span flex></span>  
+     <div  align="right"  >  {{ p.info }}   </div>
+
+   </md-whiteframe>  
