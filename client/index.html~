@@ -16,9 +16,19 @@
              <md-icon md-svg-src="img/view-headline.svg" aria-label="Icon"></md-icon>
           </md-button>
           <md-menu-content width="2">
-            <md-menu-item ng-repeat="item in ['About G-Cloud', 'Version']">
-              <md-button > <span md-menu-align-target>Option</span> {{item}} </md-button>
+
+           <md-menu-item ng>
+              <md-button >  About G-Cloud 
+             <md-tooltip>
+                    This is Open Stack CLOUD LAB 
+                 </md-tooltip>              
+              </md-button>
+            </md-menu-item> 
+            
+            <md-menu-item ng>
+              <md-button >  Version </md-button>
             </md-menu-item>
+            
           </md-menu-content>
         </md-menu>
              
