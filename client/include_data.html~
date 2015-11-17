@@ -3,6 +3,3 @@
     <div>  TESTING  templates ..........</div>
 </template>
 
-<script type="text/ng-template" id="myTemplate">
-  part
-</script>
