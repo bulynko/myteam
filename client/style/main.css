@@ -29,8 +29,26 @@ md-radio-button.md-default-theme, md-radio-button .md-on {
 
 .loginlogo img{
         margin: 30px 0px 0px 5px;
-	height: 122px;
-	width: 200px;
+	height: 70px;
+	width: 144px;
+}
+
+.equinixlogo img{
+        margin: 20px 0px 0px 100px;
+        height: 70px;
+        width: 144px;
+}
+
+.datacenterlogo img{
+        margin: 20px 0px 0px 30px;
+        height: 127px;
+        width: 270px;
+}
+
+.openstacklogo img{
+        margin: 20px 0px 0px 30px;
+        height: 69px;
+        width: 270px;
 }
 
 /*  Login Page Title */
