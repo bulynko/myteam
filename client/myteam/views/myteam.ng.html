@@ -17,8 +17,7 @@
    </md-input-container>    
 
      <div layout="column"    ng-hide= "(  theproject != 'OVERVIEW' ) ">     
-       <a> G-Cloud is based on the most popular OpenSource project namely OpenStack. G-Cloud will use the OpenStack products such as IBM CMO and Red Hat OpenStack Platform.</a> <a class="openstacklogo"> <img src="img/openstack.png"/> </a>
-
+        <div ng-app="" ng-include="'client/include/include_overview.html'"></div>
      </div>     
       
      
@@ -54,14 +53,15 @@
    
    <md-divider ng-if="!$last"></md-divider>
    
-     <div layout="column"    ng-hide= "(  projectMgmt != 'MEETINGS' ) ">     
-       <a> No schedule yet ....</a>
+     <div layout="column"    ng-hide= "(  projectMgmt != 'MEETINGS' ) ">   
+      <div ng-app="" ng-include="'client/include/include_meetings.html'"></div>  
      </div>  
      <div layout="column"    ng-hide= "(  projectMgmt != 'TASKS' ) ">     
-       <a>  1) Network Workshop preparation </a>
+        <div ng-app="" ng-include="'client/include/include_tasks.html'"></div>
      </div>          
-     <div layout="column"    ng-hide= "(  projectMgmt != 'STATUS' ) ">     
-       <a> HW order released,  shipment estimated date 15 Dec 2105</a>
+     
+     <div layout="column"    ng-hide= "(  projectMgmt != 'STATUS' ) ">        
+       <div ng-app="" ng-include="'client/include/include_status.html'"></div>
      </div>        
       
     </md-tab-body> 
