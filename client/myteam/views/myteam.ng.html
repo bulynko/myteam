@@ -1,6 +1,6 @@
 
 <md-content class="md-padding">
-<div layout="column"  style="padding=20px; color: purple;" >
+<div layout="column"  style="padding=20px; color: gray;" >
 
  <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always"  md-selected="selectedIndex" >
     <md-tab   >
@@ -11,14 +11,13 @@
  <!-- {{  currentUser | displayName }} --> 
 
       <md-input-container  layout="flex"  > 
-      <label>Project Information</label>   
       <md-select ng-model="theproject"  > 
           <md-option ng-repeat="projectInfo in ['OVERVIEW','STATUS','LOCATION','TEAM']" value="{{ projectInfo }}" >  {{ projectInfo }} </md-option>
      </md-select>
    </md-input-container>    
 
      <div layout="column"    ng-hide= "(  theproject != 'OVERVIEW' ) ">     
-       <a> This  Open Stack project .....   RH + IBM</a>
+       <a> G-Cloud is based on the most popular OpenSource project namely OpenStack. G-Cloud will use the OpenStack products such as IBM CMO and Red Hat OpenStack Platform. </a>
      </div>     
      
      <div layout="column"    ng-hide= "(  theproject != 'STATUS' ) ">     
