@@ -2,8 +2,11 @@
 <md-content class="md-padding">
 <div layout="column"  style="padding=20px; color: gray;" >
 
- <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs  md-selected="selectedIndex" >
-    <md-tab label="Cloud Project" >
+ <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always"  md-selected="selectedIndex" >
+    <md-tab   >
+        <md-tab-label> Cloud Project
+             <md-icon md-svg-src="img/cloud-download.svg"></md-icon>
+      </md-tab-label>
 
  <!-- {{  currentUser | displayName }} --> 
 
@@ -30,7 +33,11 @@
     
 
     <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
-    <md-tab label="News" >
+    <md-tab  >
+      <md-tab-label> News
+             <md-icon md-svg-src="img/cloud-print-outline.svg"></md-icon>
+        </md-tab-label>
+      <md-tab-body>
 
  <md-input-container  layout="flex"  >     
   <md-radio-group ng-model="projectMgmt" layout="raw" >
@@ -51,7 +58,8 @@
      <div layout="column"    ng-hide= "(  projectMgmt != 'TASKS' ) ">     
        <a>  1) Network Workshop preparation </a>
      </div>          
-       
+      
+    </md-tab-body> 
     </md-tab>    
     
  </md-tabs>
