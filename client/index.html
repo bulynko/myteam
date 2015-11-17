@@ -10,7 +10,18 @@
 
   <md-toolbar  md-scroll-shrink layout="row" layout-align="start center" layout-padding>
        
-     <md-icon md-svg-src="img/view-headline.svg" aria-label="Icon"></md-icon>
+ 
+      <md-menu md-offset="0 -7">
+          <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+             <md-icon md-svg-src="img/view-headline.svg" aria-label="Icon"></md-icon>
+          </md-button>
+          <md-menu-content width="2">
+            <md-menu-item ng-repeat="item in ['About G-Cloud', 'Version']">
+              <md-button >  {{item}} </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+             
        
        
     <span flex> <div class=loginheadertitle align="center">  G-Cloud Team  </div> </span>   
