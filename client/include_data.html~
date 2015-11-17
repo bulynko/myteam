@@ -1,0 +1,8 @@
+
+<template name="myTemplate99">
+    <div>  TESTING  templates ..........</div>
+</template>
+
+<script type="text/ng-template" id="myTemplate">
+  part
+</script>

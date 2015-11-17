@@ -19,6 +19,24 @@ md-tab-item {
 
 }
 
+md-radio-button.md-checked .md-off {
+    border-color: blue !important;
+    border-top-color: blue !important;
+    border-right-color: rgba(255, 64, 129, 0.87);
+    border-bottom-color: rgba(255, 64, 129, 0.87);
+    border-left-color: rgba(255, 64, 129, 0.87);
+}
+
+
+
+md-radio-button.md-checked .md-off  {
+    border-color: green !important;
+}
+
+md-radio-button.md-default-theme, md-radio-button .md-on {
+    background-color: blue;
+}
+
 .loginlogo img{
         margin: 30px 0px 0px 5px;
 	height: 122px;

@@ -1,18 +1,10 @@
-md-tabs-wrapperXX   {
-
-}
 
 md-tab-item {
-background-color:  gray ;
-color:  green;
+    background: #f0f0f0;
+    color: #6f2a8e !important; 
+    border: 1px solid #e1e1e1; 
 }
 
-
-   .md-header-itemsXXX {
-     width: 100%;
-     height: 100%;
-     width: 99999px;
-   }
 
 /*  Login Page Header Title */
 .loginheadertitle {
@@ -25,6 +17,30 @@ color:  green;
         /* font: 24px arial, sans-serif; */
         /* margin-top: 20px; */
 
+}
+
+md-radio-button.md-checked .md-off {
+    border-color: blue !important;
+    border-top-color: blue !important;
+    border-right-color: rgba(255, 64, 129, 0.87);
+    border-bottom-color: rgba(255, 64, 129, 0.87);
+    border-left-color: rgba(255, 64, 129, 0.87);
+}
+
+md-radio-button.md-checked .md-testing  {
+    border-color: green !important;
+    border-top-color: green !important;
+    border-right-color: rgba(255, 64, 129, 0.87);
+    border-bottom-color: rgba(255, 64, 129, 0.87);
+    border-left-color: rgba(255, 64, 129, 0.87);
+}
+
+md-radio-button.md-checked .md-off  {
+    border-color: green !important;
+}
+
+md-radio-button.md-default-theme, md-radio-button .md-on {
+    background-color: blue;
 }
 
 .loginlogo img{
@@ -45,4 +61,5 @@ color:  green;
         /* margin-top: 20px; */
 
 }
+
 
