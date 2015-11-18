@@ -1,5 +1,0 @@
-#!/bin/bash
-export PORT=3010
-export MONGO_URL=mongodb://localhost:27017/cloudteam
-export ROOT_URL=http://10.1.66.27:3010
-
