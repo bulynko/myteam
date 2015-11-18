@@ -8,14 +8,16 @@ md-tab-item {
 
 /*  Login Page Header Title */
 .loginheadertitle {
-        margin: 0px 0px 0px 0px;
+	display: block;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: -10%;
+        margin-right: auto;
         color: #ffffff;
         text-align: center;
         font-family: 'Raleway', sans-serif;
-        font-weight: 100;
+        font-weight: 400;
         font-size: 20px;
-        /* font: 24px arial, sans-serif; */
-        /* margin-top: 20px; */
 }
 
 md-radio-button.md-checked .md-off  {
