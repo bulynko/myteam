@@ -13,10 +13,9 @@ md-tab-item {
         text-align: center;
         font-family: 'Raleway', sans-serif;
         font-weight: 100;
-        font-size: 24px;
+        font-size: 20px;
         /* font: 24px arial, sans-serif; */
         /* margin-top: 20px; */
-
 }
 
 md-radio-button.md-checked .md-off  {
@@ -27,41 +26,69 @@ md-radio-button.md-default-theme, md-radio-button .md-on {
     background-color: #6f2a8e;
 }
 
+
 .loginlogo img{
-        margin: 30px 0px 0px 5px;
-	height: 70px;
-	width: 144px;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;	
+    height: 87px;
+    width: 144px;
 }
 
 .equinixlogo img{
-        margin: 20px 0px 0px 100px;
-        height: 70px;
-        width: 144px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;	
+    height: 70px;
+    width: 144px;
 }
 
 .datacenterlogo img{
-        margin: 20px 0px 0px 30px;
-        height: 127px;
-        width: 270px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;	
+    height: 127px;
+    width: 270px;
 }
 
+
 .openstacklogo img{
-        margin: 20px 0px 0px 30px;
-        height: 69px;
-        width: 270px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;	
+    height: 69px;
+    width: 270px;
+}
+
+.neutron img{
+   display: block;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;	
+    height: 250px;
+    width: 280px;
 }
 
 /*  Login Page Title */
-.logintitle {
-        margin: 40px 0px 0px 5px;
-        color: #6a747c;
-        text-align: center;
-        font-family: 'Raleway', sans-serif;
-        font-weight: bold;
-        font-size: 22px;
-        /* font: 24px arial, sans-serif; */
-        /* margin-top: 20px; */
-
+.centre {
+	display: block;
+	margin-top: 0px;
+        margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #6a747c;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
 }
-
 

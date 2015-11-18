@@ -19,29 +19,40 @@
 
            <md-menu-item ng>
               <md-button >  About G-Cloud 
-             <md-tooltip>
-                    This is Open Stack CLOUD LAB 
-                 </md-tooltip>              
               </md-button>
-            </md-menu-item> 
+	    <md-tooltip>
+    		OpenStack Lab
+  	    </md-tooltip>
+           </md-menu-item> 
             
+	    <md-menu-divider></md-menu-divider>
             <md-menu-item ng>
               <md-button >  Version </md-button>
-                  <md-tooltip>
-                      Mobile  G-Cloud App  - v 0.1
-                 </md-tooltip>  
+            <md-tooltip>
+              G-Cloud App 0.1
+            </md-tooltip>
+	    </md-menu-item>
+          
+	    <md-menu-divider></md-menu-divider>
+	    <div class="container" ng-if="currentUser">
+            <md-menu-item ng>
+            <md-button href="/api/auth/signout" target="_self" ng-click="userLogout()" > Logout </md-button>
             </md-menu-item>
-            
-          </md-menu-content>
-        </md-menu>
+    	    </div>
+          
+	    </md-menu-content>
+          </md-menu>
              
        
        
     <span flex> <div class=loginheadertitle align="center">  G-Cloud Team  </div> </span>   
   
     <div class="container"   ng-hide= "(  currentUser.emails[0].address != 'cloudteam@gbmme.com' ) " >   
+
+<!--
       <md-button class="md-raised md-primary"  ng-href="/myteam"  > 
        LOGOUT </md-button>    
+-->
     </div> 
 
   </md-toolbar>  <!-- Toolbar -->
