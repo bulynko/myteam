@@ -35,7 +35,20 @@ angular.module("myteam").config(['$urlRouterProvider', '$stateProvider', '$locat
             return $meteor.requireUser();
           }]
         }
-      });
+      })
+        .state('cloudlab', {
+        url: '/cloudlab',
+        templateUrl: 'client/cloudlab/views/cloudlab.ng.html',
+        controller: 'cloudlabCtrl'
+      })      
+      
+        .state('teamadmin', {
+        url: '/teamadmin',
+        templateUrl: 'client/cloudlab/views/admin.ng.html',
+        controller: 'adminCtrl'
+      })     
+      
+      ;
 
     $urlRouterProvider.otherwise("/login");
 

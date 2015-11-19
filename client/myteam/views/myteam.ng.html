@@ -10,17 +10,20 @@
     <md-tab-body> 
  <!-- {{  currentUser | displayName }} --> 
 
-      <md-input-container  layout="flex"  > 
-      <md-select ng-model="theproject"  > 
-          <md-option ng-repeat="projectInfo in ['OVERVIEW','LOCATION','TEAM']" value="{{ projectInfo }}" >  {{ projectInfo }} </md-option>
-     </md-select>
-   </md-input-container>    
+      <md-input-container> 
 
+  <md-radio-group ng-model="theproject" layout="raw" >
+      <div  ng-repeat="projectInfo in ['OVERVIEW','LOCATION','TEAM']"   layout="column"  >
+      <md-radio-button  ng-value="projectInfo"   layout="row"  >      
+          {{ projectInfo }}   
+      </md-radio-button >      
+       </div>
+     </md-radio-group>
+        
      <div layout="column"    ng-hide= "(  theproject != 'OVERVIEW' ) ">     
         <div ng-app="" ng-include="'client/include/include_overview.html'"></div>
      </div>     
-      
-     
+        
      <div layout="column"    ng-hide= "(  theproject != 'LOCATION' ) ">   
        <div ng-app="" ng-include="'client/include/include_location.html'"></div>
        </div>    
@@ -28,7 +31,8 @@
      <div layout="column"    ng-hide= "(  theproject != 'TEAM' ) ">     
        <div ng-app="" ng-include="'client/include/include_team.html'"></div>
      </div>       
-    
+  
+   </md-input-container>    
    </md-tab-body> 
    </md-tab>
     
@@ -40,30 +44,49 @@
         </md-tab-label>
       <md-tab-body>
 
- <md-input-container  layout="flex"  >     
+ <md-input-container  layout="column"  >
+      
   <md-radio-group ng-model="projectMgmt" layout="raw" >
-      <div  ng-repeat="projectActions in ['MEETINGS','TASKS','STATUS']"   layout="column"  >
+      <div  ng-repeat="projectActions in ['STATUS','MSG','MEMBER']"   layout="column"  >
       <md-radio-button  ng-value="projectActions"  layout="row" >      
           {{ projectActions }}   
       </md-radio-button >      
       </div>
  </md-radio-group>    
    
- </md-input-container>    
    
-   <md-divider ng-if="!$last"></md-divider>
-   
-     <div layout="column"    ng-hide= "(  projectMgmt != 'MEETINGS' ) ">   
-      <div ng-app="" ng-include="'client/include/include_meetings.html'"></div>  
+     <div layout="column"    ng-hide= "(  projectMgmt != 'STATUS' ) ">  
+      <div ng-app="" ng-include="'client/include/include_status.html'"></div>  
      </div>  
-     <div layout="column"    ng-hide= "(  projectMgmt != 'TASKS' ) ">     
-        <div ng-app="" ng-include="'client/include/include_tasks.html'"></div>
-     </div>          
      
-     <div layout="column"    ng-hide= "(  projectMgmt != 'STATUS' ) ">        
-       <div ng-app="" ng-include="'client/include/include_status.html'"></div>
+     <div layout="column"    ng-hide= "(  projectMgmt != 'MSG' ) ">        
+       <div ng-app="" ng-include="'client/include/include_messages.html'"></div>
      </div>        
-      
+
+     <div layout="column"    ng-hide= "(  projectMgmt != 'MEMBER' ) ">
+    
+   <form>      
+    <md-input-container  style="padding: 15px ">
+      <label>Login email</label>
+      <input ng-model="myuser.email"  type="email">
+    </md-input-container>
+    <md-input-container  style="padding: 15px ">
+      <label>Password</label>
+      <input ng-model="myuser.password" type="password">
+    </md-input-container>
+
+    <font color="red">{{ loginErrorMessage }} </font>
+    
+    
+       <md-button class="md-raised md-primary"  ng-click="memberLogin(myuser)" >
+        MEMBER LOGIN </md-button>
+
+   </form>      
+     </div>          
+        
+   
+   
+    </md-input-container>       
     </md-tab-body> 
     </md-tab>    
     

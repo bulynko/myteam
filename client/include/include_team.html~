@@ -1,8 +1,8 @@
-  <md-whiteframe ng-repeat="t in [ u1, u2, u3 ,u4 , u5 ]" class="md-whiteframe-z3" layout 
+  <md-whiteframe ng-repeat="u in [ u1, u2, u3 ,u4 , u5 ]" class="md-whiteframe-z3" layout 
    layout-align="center center"  style="margin: 3px ; padding: 5px;">  
    
-     <div>    <h3> {{ t.name }} </h3> {{ t.role }}  </div>    
+     <div>    <h3> {{ u.name }} </h3> - {{ u.role }}  </div>    
      <span flex></span>  
-     <div  align="right"  >  {{ t.contact }}   </div>
+     <div  align="right"  >  {{ u.contact }}   </div>
 
    </md-whiteframe>  

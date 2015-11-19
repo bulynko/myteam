@@ -7,3 +7,15 @@
      <div  align="right"  >  {{ p.info }}   </div>
 
    </md-whiteframe>  
+   
+   
+   
+   
+     <md-whiteframe ng-repeat="u in [ u1, u2, u3 ,u4 , u5 , u6]" class="md-whiteframe-z3" layout 
+   layout-align="center center"  style="margin: 3px ; padding: 5px;">  
+   
+     <div>    <h3> {{ u.name }} </h3> - {{ u.role }}  </div>    
+     <span flex></span>  
+     <div  align="right"  >  {{ u.contact }}   </div>
+
+   </md-whiteframe>  
