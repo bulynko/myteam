@@ -1,7 +1,10 @@
 
 <md-content class="md-padding">
 <div layout="column"  style="padding=20px; color: gray;" >
-
+    <md-button  class="md-raised md-primary"   href="/teamview" > Home </md-button>
+ 
+   loggedIn: {{ currentUser | displayName}}
+        
  <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always"  md-selected="selectedIndex" >
     <md-tab   >
         <md-tab-label > Options

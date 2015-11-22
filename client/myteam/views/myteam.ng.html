@@ -2,6 +2,14 @@
 <md-content class="md-padding">
 <div layout="column"  style="padding=20px; color: gray;" >
 
+<!--
+loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
+-->
+
+<div layout="column"    ng-hide= "(  loginFlag != 1 ) ">     
+ <md-button  class="md-raised md-primary"   href="/cloudlab" > Member </md-button>
+</div>
+
  <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always"  md-selected="selectedIndex" >
     <md-tab   >
         <md-tab-label > Info
@@ -72,7 +80,7 @@
     </md-input-container>
     <md-input-container  style="padding: 15px ">
       <label>Password</label>
-      <input ng-model="myuser.password" type="password">
+      <input ng-model="myuser.pass" type="password">
     </md-input-container>
 
     <font color="red">{{ loginErrorMessage }} </font>

@@ -4,7 +4,9 @@ angular.module("myteam").controller("loginCtrl", ['$scope', '$meteor', '$rootSco
    console.log(" Login-Controller..... ");
    Meteor.logout();  
 
- $scope.userLoginButton = function(myuser) {
+    $rootScope.loginFlag =0;  
+    
+   $scope.userLoginButton = function(myuser) {
 
   var c = myuser.code;  
 
@@ -12,8 +14,10 @@ angular.module("myteam").controller("loginCtrl", ['$scope', '$meteor', '$rootSco
   {
      console.log(" code accepted ! "+c);
      Accounts.createUser({ email: 'cloudteam@gbmme.com' , password: 'cloud'  } );  	
+     Accounts.createUser({ email: 'cloudadmin@gbmme.com' , password: 'cloudadmin'  } );  	
    //  Meteor.logout();  
-     
+    //  Accounts.createUser({ email: 'cloudteam@gbmme.com' , password: 'cloud'  } );  	
+   //  Meteor.logout();  
      Meteor.loginWithPassword('cloudteam@gbmme.com', 'cloud');  
      $state.go("teamview");   
 

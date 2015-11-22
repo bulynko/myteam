@@ -1,4 +1,4 @@
-angular.module("myteam").controller("memeberCtrl", ['$scope', '$stateParams', '$meteor', '$rootScope', '$state',
+angular.module("myteam").controller("cloudlabCtrl", ['$scope', '$stateParams', '$meteor', '$rootScope', '$state',
   function($scope,  $stateParams, $meteor, $rootScope, $state){
 
  

@@ -4,6 +4,7 @@ angular.module("myteam").controller("cloudlabCtrl", ['$scope', '$stateParams', '
  
     console.log(" Controller for cloud lab ..... ");
 
+    $rootScope.loginFlag =1;  
 
     $scope.myteam = $meteor.collection(MyTeam).subscribe('myteam');
     $scope.teams = $meteor.collection(Teams).subscribe('teams');
