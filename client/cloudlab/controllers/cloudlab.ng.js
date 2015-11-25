@@ -10,7 +10,7 @@ angular.module("myteam").controller("cloudlabCtrl", ['$scope', '$stateParams', '
     $scope.teams = $meteor.collection(Teams).subscribe('teams');
 
 
-    $scope.users = $meteor.collection(Meteor.users, false).subscribe('users');
+ 
 
  //==========================================================================
     

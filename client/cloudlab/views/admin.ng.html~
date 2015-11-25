@@ -1,0 +1,84 @@
+
+<md-content class="md-padding">
+<div layout="column"  style="padding=20px; color: gray;" >
+
+   <md-button  class="md-raised md-primary"   href="/cloudlab" > Member </md-button>
+
+
+ <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always"  md-selected="selectedIndex" >
+    <md-tab   >
+        <md-tab-label > Users
+             <md-icon md-svg-src="img/cloud-print-outline.svg"></md-icon>
+      </md-tab-label>
+    <md-tab-body> 
+
+       <h1> Users , Passwords,  Access , ...</h1>  
+
+    <md-input-container style="padding: 10px" >
+      <label>Login email</label>
+      <input ng-model="newuser.email"  type="email">
+    </md-input-container>
+
+    <md-input-container  style="padding: 10px">
+      <label>Password</label>
+      <input ng-model="newuser.password" type="password">
+    </md-input-container>
+
+    <md-input-container  style="padding: 10px">
+      <label>Password verification</label>
+      <input ng-model="newuser.password2" type="password">
+    </md-input-container>
+    
+    <font color="red">{{ registerErrorMessage }} </font>
+    
+    <md-input-container  style="padding: 20px">
+      <md-button class="md-raised md-primary"  ng-click="registerUser(newuser)" 
+       align="center"> REGISTER </md-button> 
+    </md-input-container>
+    
+
+   <md-whiteframe ng-repeat="u in users " class="md-whiteframe-z3" layout 
+   layout-align="center center"  style="margin: 5px ; padding: 3px;">  
+   
+     <div> 
+      <h4> user :  {{ u | displayName}}  {{u._id}}   </h4> 
+      </div>   
+ 
+     <span flex></span>  
+     <div  align="right" ng-hide = "(  u.emails[0].address == 'cloudadmin@gbmme.com' )" >
+       <md-button class="md-raised md-primary"  
+       ng-click="removeUser(u._id) " >X</md-button>    
+     </div>
+
+    </md-whiteframe>   
+     
+    
+   </md-tab-body> 
+   </md-tab>
+    
+
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
+    <md-tab  >
+      <md-tab-label> System
+             <md-icon md-svg-src="img/cloud-download.svg"></md-icon>
+        </md-tab-label>
+      <md-tab-body>
+
+     <h1>  Settings ,  Alerts, .......</h1>  
+ 
+         
+      
+    </md-tab-body> 
+    </md-tab>    
+    
+ </md-tabs>
+
+
+ </div>    
+ </md-content >
+ 
+ 
+
+
+ 
+ 
