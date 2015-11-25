@@ -34,7 +34,7 @@
 	    </md-menu-item>
           
 	    <md-menu-divider></md-menu-divider>
-	    <div class="container" ng-if="currentUser">
+	    <div class="container" ng-if=" ( loginFlag != 0)">
             <md-menu-item ng>
             <md-button href="/api/auth/signout" target="_self" ng-click="userLogout()" > Logout </md-button>
             </md-menu-item>
@@ -42,8 +42,7 @@
           
 	    </md-menu-content>
           </md-menu>
-             
-       
+            
        
     <span flex> <div class=loginheadertitle align="center">  G-Cloud Team  </div> </span>   
   

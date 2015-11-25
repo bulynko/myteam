@@ -9,6 +9,7 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
     $scope.theproject = 'OVERVIEW';
     $scope.projectMgmt="STATUS";
 
+    $rootScope.loginFlag =1; 
 
     
    $scope.t1={ name  : 'Equipment order' , status : '100%'  };
@@ -37,7 +38,8 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
 
  $scope.loginErrorMessage="Loging ..... try again ! " + u;
  
-  if ((u === "cloud@cloud.com" ) || (  u === "cloudteam@gbmme.com" ))
+ // if ((u === "cloud@cloud.com" ) || (  u === "cloudadmin@gbmme.com" ))
+  if ( u != "cloudteam@gbmme.com" ) 
   {
      
     $scope.loginErrorMessage="Loging as  " + u+ " / "+p;

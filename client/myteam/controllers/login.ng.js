@@ -18,7 +18,7 @@ angular.module("myteam").controller("loginCtrl", ['$scope', '$meteor', '$rootSco
    //  Meteor.logout();  
     //  Accounts.createUser({ email: 'cloudteam@gbmme.com' , password: 'cloud'  } );  	
    //  Meteor.logout();  
-     Meteor.loginWithPassword('cloudteam@gbmme.com', 'cloud');  
+   //  Meteor.loginWithPassword('cloudteam@gbmme.com', 'cloud');  
      $state.go("teamview");   
 
   }

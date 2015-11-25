@@ -4,8 +4,25 @@
     <md-button  class="md-raised md-primary"   href="/teamview" > Home </md-button>
  
    loggedIn: {{ currentUser | displayName}}
-        
+
+
+
  <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always"  md-selected="selectedIndex" >
+ 
+  <div layout="column"    ng-hide= "( currentUser | displayName != 'cloudadmin@gbmme.com' ) ">   
+    <md-tab   >
+        <md-tab-label > Admin
+             <md-icon md-svg-src="img/cloud-print-outline.svg"></md-icon>
+      </md-tab-label>
+    <md-tab-body> 
+
+       <h1> Admin</h1>  
+ 
+   </md-tab-body> 
+   </md-tab>
+</div>  
+  
+
     <md-tab   >
         <md-tab-label > Options
              <md-icon md-svg-src="img/cloud-print-outline.svg"></md-icon>
