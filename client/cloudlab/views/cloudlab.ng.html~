@@ -1,5 +1,10 @@
 
 <md-content class="md-padding">
+
+ <div layout="column"    ng-hide="(  currentUser.emails[0].address != 'cloudadmin@gbmme.com' )">   
+     ADMIN ?  
+ </div>
+
 <div layout="column"  style="padding=20px; color: gray;" >
     <md-button  class="md-raised md-primary"   href="/teamview" > Home </md-button>
  
@@ -7,13 +12,13 @@
    {{  currentUser.emails[0].address }}
 
  <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always"  md-selected="selectedIndex" >
- 
-  <div layout="column"    ng-hide= "(  currentUser.emails[0].address == 'cloudadmin@gbmme.com' )">   
-    <md-tab   >
+
+    <md-tab  ng-if="(  currentUser.emails[0].address == 'cloudadmin@gbmme.com' )">
         <md-tab-label > Admin
              <md-icon md-svg-src="img/cloud-print-outline.svg"></md-icon>
       </md-tab-label>
     <md-tab-body> 
+
 
        <h1> Admin</h1>  
         <md-button  class="md-raised md-primary"   href="/teamadmin" > Admin Tools </md-button>
@@ -21,8 +26,6 @@
  
    </md-tab-body> 
    </md-tab>
-</div>  
-  
 
     <md-tab   >
         <md-tab-label > Options
