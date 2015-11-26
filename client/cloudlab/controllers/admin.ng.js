@@ -6,8 +6,8 @@ angular.module("myteam").controller("adminCtrl", ['$scope', '$stateParams', '$me
 
     $rootScope.loginFlag =3; 
 
-    $scope.myteam = $meteor.collection(MyTeam).subscribe('myteam');
-    $scope.teams = $meteor.collection(Teams).subscribe('teams');
+ //   $scope.myteam = $meteor.collection(MyTeam).subscribe('myteam');
+ //   $scope.teams = $meteor.collection(Teams).subscribe('teams');
 
     $scope.users = $meteor.collection(Meteor.users, false).subscribe('users');
   

@@ -67,7 +67,7 @@ angular.module("myteam").controller("adminCtrl", ['$scope', '$stateParams', '$me
      $scope.newuser.password2="";
       
     //console.log(" code/pswd ERROR "+c);
-    //$scope.registerErrorMessage="Error ..... try again ! " ;          	
+    $scope.registerErrorMessage="Changing password for  "+myuser.emails[0].address ;          	
   }
   };
  //------------------------

@@ -47,29 +47,27 @@
      <div layout="column"    ng-hide= "(  projectMgmt != 'REQUESTS' ) ">   
 
         
+     <form>   
      <md-input-container  style="padding: 10px">
        <label>Request</label>
-       <input ng-model="req.msg" type="text">
+       <input ng-model="req.msg" type="text" ng-minlength="5" required>
      </md-input-container>
     
     
-      <md-button class="md-raised md-primary"  ng-click="createRequest(req)" 
+      <md-button class="md-raised md-primary"  ng-click="createRequest(req,currentUser)" 
        align="center"> Create Request </md-button> 
-       
+     </form>  
 
    <md-whiteframe ng-repeat="t in tasks" class="md-whiteframe-z3" layout 
    layout-align="center center"  style="margin: 5px ; padding: 3px;">  
    
      <div> 
-      <h4> t.msg    </h4> 
+      <h4>  {{ t.message }} id: {{ t.owner }}   </h4> 
       </div>   
       
      <span flex></span>  
-     <div  align="right" ng-hide = "(  u.emails[0].address == 'cloudadmin@gbmme.com' ) || (! editUser)" >
-       <md-button class="md-raised md-primary"  ng-click="removeUser(u._id) " >X</md-button>   
-    
-      <md-button class="md-raised md-primary"  ng-click="changePassword(u._id,newuser)" 
-       align="center"> PSWD </md-button>          
+     <div  align="right"  >
+       <md-button class="md-raised md-primary"  ng-click="removeRequest(t._id) " >X</md-button>   
       </div> 
         
     </md-whiteframe>          

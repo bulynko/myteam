@@ -11,8 +11,8 @@ Tasks.allow({
     return true;
   },
 
-  remove: function (userName) {
-    return userName === 'ADMIN';
+  remove: function (arg1) {
+    return true;
   }
 
 });

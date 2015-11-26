@@ -7,8 +7,8 @@ angular.module("myteam").controller("cloudlabCtrl", ['$scope', '$stateParams', '
     $rootScope.loginFlag =2;  
     $scope.projectMgmt='4me';
 
-    $scope.myteam = $meteor.collection(MyTeam).subscribe('myteam');
-    $scope.teams = $meteor.collection(Teams).subscribe('teams');
+//    $scope.myteam = $meteor.collection(MyTeam).subscribe('myteam');
+ //   $scope.teams = $meteor.collection(Teams).subscribe('teams');
 
     $scope.tasks = $meteor.collection(Tasks).subscribe('tasks');
 
@@ -39,12 +39,17 @@ angular.module("myteam").controller("cloudlabCtrl", ['$scope', '$stateParams', '
 
  //==========================================================================
         
- $scope.createRequest  = function(myreq) {
+ $scope.createRequest  = function(myreq,u) {
 
-
+  if ( myreq != 'undefined')
+  {
   var msg = myreq.msg;
-   tasks.insert(myreq);
+   Tasks.insert({ tasktype : 'REQ', message: msg , status: 1, ownerid: u._id , owner: u.emails[0].address });
+   }
+  };
 
+   $scope.removeRequest  = function(tid) {
+   Tasks.remove(tid);
   };
 
  //==========================================================================
