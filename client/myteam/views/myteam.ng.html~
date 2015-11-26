@@ -6,7 +6,7 @@
 loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
 -->
 
-<div layout="column"    ng-hide= "(  loginFlag != 1 ) ">     
+<div layout="column"    ng-hide= "( ! currentUser ) ">     
  <md-button  class="md-raised md-primary"   href="/cloudlab" > Member </md-button>
 </div>
 
@@ -82,15 +82,14 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
       <label>Password</label>
       <input ng-model="myuser.pass" type="password">
     </md-input-container>
-
-    <font color="red">{{ loginErrorMessage }} </font>
-    
     
        <md-button class="md-raised md-primary"  ng-click="memberLogin(myuser)" >
         MEMBER LOGIN </md-button>
 
+  <font color="red">{{ loginErrorMessage }} </font>
+
    </form>      
-     </div>          
+  </div>          
         
    
    

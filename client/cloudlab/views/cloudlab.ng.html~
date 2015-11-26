@@ -1,15 +1,9 @@
 
 <md-content class="md-padding">
 
- <div layout="column"    ng-hide="(  currentUser.emails[0].address != 'cloudadmin@gbmme.com' )">   
-     ADMIN ?  
- </div>
-
 <div layout="column"  style="padding=20px; color: gray;" >
     <md-button  class="md-raised md-primary"   href="/teamview" > Home </md-button>
  
-   loggedIn: {{ currentUser | displayName}}
-   {{  currentUser.emails[0].address }}
 
  <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always"  md-selected="selectedIndex" >
 
@@ -26,18 +20,8 @@
  
    </md-tab-body> 
    </md-tab>
-
-    <md-tab   >
-        <md-tab-label > Options
-             <md-icon md-svg-src="img/cloud-print-outline.svg"></md-icon>
-      </md-tab-label>
-    <md-tab-body> 
-
-       <h1> User Profile</h1>  
- 
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
     
-   </md-tab-body> 
-   </md-tab>
     
 
     <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
@@ -49,7 +33,7 @@
 
  <md-input-container  layout="flex"  >     
   <md-radio-group ng-model="projectMgmt" layout="raw" >
-      <div  ng-repeat="projectActions in ['REQUESTS','TASKS','NEWS']"   layout="column"  >
+      <div  ng-repeat="projectActions in ['REQUESTS','TASKS','4me']"   layout="column"  >
       <md-radio-button  ng-value="projectActions"  layout="row" >      
           {{ projectActions }}   
       </md-radio-button >      
@@ -60,17 +44,60 @@
    
    <md-divider ng-if="!$last"></md-divider>
    
-     <div layout="column"    ng-hide= "(  projectMgmt != 'MEETINGS' ) ">   
-        <h1> meetings .... </h1>
+     <div layout="column"    ng-hide= "(  projectMgmt != 'REQUESTS' ) ">   
+
+        
+     <md-input-container  style="padding: 10px">
+       <label>Request</label>
+       <input ng-model="req.msg" type="text">
+     </md-input-container>
+    
+    
+      <md-button class="md-raised md-primary"  ng-click="createRequest(req)" 
+       align="center"> Create Request </md-button> 
+       
      </div>  
      
      
      <div layout="column"    ng-hide= "(  projectMgmt != 'TASKS' ) ">     
         <h1> tasks .... </h1>
      </div>          
+
+     <div layout="column"    ng-hide= "(  projectMgmt != '4me' ) ">     
+        <h1> my work .... </h1>
+     </div>      
            
     </md-tab-body> 
     </md-tab>    
+    <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->    
+    
+    <md-tab   >
+        <md-tab-label > Options
+             <md-icon md-svg-src="img/cloud-print-outline.svg"></md-icon>
+      </md-tab-label>
+    <md-tab-body> 
+
+     logged-In: {{ currentUser | displayName}}
+      
+ 
+     <md-input-container  style="padding: 10px">
+      <label>Password</label>
+      <input ng-model="meuser.password" type="password">
+    </md-input-container>
+
+    <md-input-container  style="padding: 10px">
+      <label>Password verification</label>
+      <input ng-model="meuser.password2" type="password">
+    </md-input-container>
+    
+    
+      <md-button class="md-raised md-primary"  ng-click="changePassword(currentUser._id,meuser)" 
+       align="center"> Change my password </md-button> 
+
+   <font color="red">{{ passwordErrorMessage }} </font>
+    
+   </md-tab-body> 
+   </md-tab>
     
  </md-tabs>
 

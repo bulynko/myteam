@@ -30,26 +30,37 @@
     </md-input-container>
     
     <font color="red">{{ registerErrorMessage }} </font>
-    
+  
+  <div layout="row">  
     <md-input-container  style="padding: 20px">
       <md-button class="md-raised md-primary"  ng-click="registerUser(newuser)" 
        align="center"> REGISTER </md-button> 
     </md-input-container>
-    
+
+
+        <md-checkbox ng-model="editUser" >
+          Edit Users: {{ editUser }}
+        </md-checkbox>
+
+  </div>   
 
    <md-whiteframe ng-repeat="u in users " class="md-whiteframe-z3" layout 
    layout-align="center center"  style="margin: 5px ; padding: 3px;">  
    
      <div> 
-      <h4> user :  {{ u | displayName}}  {{u._id}}   </h4> 
-      </div>   
+      <h4> user :  {{ u | displayName}}    </h4> 
  
+      </div>   
      <span flex></span>  
-     <div  align="right" ng-hide = "(  u.emails[0].address == 'cloudadmin@gbmme.com' )" >
-       <md-button class="md-raised md-primary"  
-       ng-click="removeUser(u._id) " >X</md-button>    
-     </div>
-
+     <div  align="right" ng-hide = "(  u.emails[0].address == 'cloudadmin@gbmme.com' ) || (! editUser)" >
+ 
+       <md-button class="md-raised md-primary"  ng-click="removeUser(u._id) " >X</md-button>   
+    
+      <md-button class="md-raised md-primary"  ng-click="changePassword(u._id,newuser)" 
+       align="center"> PSWD </md-button> 
+         
+      </div> 
+        
     </md-whiteframe>   
      
     

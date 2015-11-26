@@ -42,18 +42,11 @@
           
 	    </md-menu-content>
           </md-menu>
-             
-     flag:  {{ loginFlag}}
+            
        
     <span flex> <div class=loginheadertitle align="center">  G-Cloud Team  </div> </span>   
   
-    <div class="container"   ng-hide= "(  currentUser.emails[0].address != 'cloudteam@gbmme.com' ) " >   
 
-<!--
-      <md-button class="md-raised md-primary"  ng-href="/myteam"  > 
-       LOGOUT </md-button>    
--->
-    </div> 
 
   </md-toolbar>  <!-- Toolbar -->
 

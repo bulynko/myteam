@@ -12,8 +12,6 @@
       </md-tab-label>
     <md-tab-body> 
 
-       <h1> Users , Passwords,  Access , ...</h1>  
-
     <md-input-container style="padding: 10px" >
       <label>Login email</label>
       <input ng-model="newuser.email"  type="email">
@@ -37,10 +35,10 @@
        align="center"> REGISTER </md-button> 
     </md-input-container>
 
-    <md-input-container  style="padding: 20px">
-      <md-button class="md-raised md-primary"  ng-click="changePassword(newuser)" 
-       align="center"> Change Password </md-button> 
-    </md-input-container>
+
+        <md-checkbox ng-model="editUser" >
+          Edit Users: {{ editUser }}
+        </md-checkbox>
 
   </div>   
 
@@ -48,15 +46,19 @@
    layout-align="center center"  style="margin: 5px ; padding: 3px;">  
    
      <div> 
-      <h4> user :  {{ u | displayName}}  {{u._id}}   </h4> 
-      </div>   
+      <h4> user :  {{ u | displayName}}    </h4> 
  
+      </div>   
      <span flex></span>  
-     <div  align="right" ng-hide = "(  u.emails[0].address == 'cloudadmin@gbmme.com' )" >
-       <md-button class="md-raised md-primary"  
-       ng-click="removeUser(u._id) " >X</md-button>    
-     </div>
-
+     <div  align="right" ng-hide = "(  u.emails[0].address == 'cloudadmin@gbmme.com' ) || (! editUser)" >
+ 
+       <md-button class="md-raised md-primary"  ng-click="removeUser(u._id) " >X</md-button>   
+    
+      <md-button class="md-raised md-primary"  ng-click="changePassword(u._id,newuser)" 
+       align="center"> PSWD </md-button> 
+         
+      </div> 
+        
     </md-whiteframe>   
      
     
@@ -71,7 +73,7 @@
         </md-tab-label>
       <md-tab-body>
 
-     <h1>  Settings ,  Alerts, .......</h1>  
+     <h3>  Settings ,  Alerts, .......</h3>  
  
          
       

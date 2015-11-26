@@ -5,6 +5,8 @@ angular.module("myteam").controller("loginCtrl", ['$scope', '$meteor', '$rootSco
    Meteor.logout();  
 
     $rootScope.loginFlag =0;  
+
+    $scope.users = $meteor.collection(Meteor.users, false).subscribe('users');    
     
    $scope.userLoginButton = function(myuser) {
 

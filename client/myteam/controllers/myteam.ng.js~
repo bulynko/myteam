@@ -6,14 +6,14 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
     $scope.myteam = $meteor.collection(MyTeam).subscribe('myteam');
     $scope.teams = $meteor.collection(Teams).subscribe('teams');
 
-    $scope.theproject = 'OVERVIEW';
+    $scope.theproject = 'WHAT';
     $scope.projectMgmt="STATUS";
 
-    $scope.loginFlag =1; 
+    $rootScope.loginFlag =1; 
 
     
-   $scope.t1={ name  : 'Equipment order' , status : '100%'  };
-   $scope.t2={ name  : 'Cloud Design' , status : '10%'  };
+ //  $scope.t1={ name  : 'Equipment order' , status : '100%'  };
+ //  $scope.t2={ name  : 'Cloud Design' , status : '10%'  };
  // t3={ name  : 'Instillation and Configuration' , gameType : '0%'  };
  
    $scope.u1={ name  : 'Marcin' , contact : '050-7483280' , role : 'Tech Lead' };
@@ -26,8 +26,9 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
    $scope.m1={ name  : 'Cloud Lab Planning' , when : '19-Nov 10am'  };
    $scope.m2={ name  : 'Cloud Network Workshop' , when : '13-Nov 10am'  };
    
-    $scope.p1= { phasename :'Project  Started' , info : '1-NOV-2015' };
-    $scope.p2= { phasename :'Planing Phase ' , info : 'OK' };
+    $scope.p3= { phasename :'Project  Started' , info : '1-NOV-2015' };
+    $scope.p2= { phasename :'Equipment Ordered' , info : '24-NOV-2015' };
+    $scope.p1= { phasename :'Planning Phase ' , info : 'in progress' };
     
   //======================================================================
 
@@ -42,7 +43,7 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
   if ( u != "cloudteam@gbmme.com" ) 
   {
      
-    $scope.loginErrorMessage="Loging as  " + u+ " / "+p;
+    $scope.loginErrorMessage="Loging as  " + u;
       
    //  Meteor.loginWithPassword('cloudteam@gbmme.com', 'cloud');
      Meteor.loginWithPassword(u, p);

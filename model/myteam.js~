@@ -1,6 +1,6 @@
 MyTeam = new Mongo.Collection("myteam");
 Teams = new Mongo.Collection("teams");
-Users = new Mongo.Collection("users");
+
 
 MyTeam.allow({
   insert: function (arg1) {
