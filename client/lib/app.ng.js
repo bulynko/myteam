@@ -39,6 +39,6 @@ else
 Meteor.startup(function() {
     Session.set("myteamid", localStorage.getItem("myteamid"));
     Session.set("myteamtag", localStorage.getItem("myteamtag"));
-    
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED=0;    
 });
 

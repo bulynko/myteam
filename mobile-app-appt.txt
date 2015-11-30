@@ -1,0 +1,17 @@
+meteor build ../myteam-build --server http://app-t.gbm.local:3000 
+meteor build ../myteam-build --server https://app-t.gbm.local 
+meteor build ../myteam-build --server http://app-t.gbm.local  --mobile-settings settings.json
+
+
+
+keytool -genkey -alias myteam -keyalg RSA -keysize 2048 -validity 10000
+
+
+
+cd ../myteam-build/android/
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 release-unsigned.apk  myteam
+
+
+
+/home/marcin/Android/Sdk/build-tools/23.0.1/zipalign  -f -v 4 release-unsigned.apk  myteam.apk
+
