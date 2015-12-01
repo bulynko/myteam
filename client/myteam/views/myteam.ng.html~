@@ -21,22 +21,22 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
       <md-input-container> 
 
   <md-radio-group ng-model="theproject" layout="raw" >
-      <div  ng-repeat="projectInfo in ['OVERVIEW','LOCATION','TEAM']"   layout="column"  >
+      <div  ng-repeat="projectInfo in ['WHAT','WHERE','WHO']"   layout="column"  >
       <md-radio-button  ng-value="projectInfo"   layout="row"  >      
           {{ projectInfo }}   
       </md-radio-button >      
        </div>
      </md-radio-group>
         
-     <div layout="column"    ng-hide= "(  theproject != 'OVERVIEW' ) ">     
+     <div layout="column"    ng-hide= "(  theproject != 'WHAT' ) ">     
         <div ng-app="" ng-include="'client/include/include_overview.html'"></div>
      </div>     
         
-     <div layout="column"    ng-hide= "(  theproject != 'LOCATION' ) ">   
+     <div layout="column"    ng-hide= "(  theproject != 'WHERE' ) ">   
        <div ng-app="" ng-include="'client/include/include_location.html'"></div>
        </div>    
     
-     <div layout="column"    ng-hide= "(  theproject != 'TEAM' ) ">     
+     <div layout="column"    ng-hide= "(  theproject != 'WHO' ) ">     
        <div ng-app="" ng-include="'client/include/include_team.html'"></div>
      </div>       
   
@@ -47,7 +47,7 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
 
     <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
     <md-tab  >
-      <md-tab-label> Project
+      <md-tab-label> Project Cloud
              <md-icon md-svg-src="img/cloud-download.svg"></md-icon>
         </md-tab-label>
       <md-tab-body>
