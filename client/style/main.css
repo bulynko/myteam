@@ -66,8 +66,8 @@ md-radio-button.md-default-theme, md-radio-button .md-on {
     margin-bottom: 0px;
     margin-left:auto;
     margin-right:auto;	
-    height: 69px;
-    width: 270px;
+    height: auto;
+    width: 360px;
 }
 
 .neutron img{
