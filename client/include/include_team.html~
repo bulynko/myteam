@@ -4,7 +4,7 @@
      <div>    <h3> {{ u.name }} </h3> - {{ u.role }}  </div>    
 
      <span flex></span> 
-     <div><img src="{{ u.logo}}" style="width:50px" /></div>  
+     <div><img src="{{ u.logo}}" style="width:60px" /></div>  
      <div  align="right"  >  {{ u.contact }}   </div>
 
    </md-whiteframe>  
