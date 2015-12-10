@@ -30,6 +30,8 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
    $scope.u4={ name  : 'Adnan' , contact : '050-1291428' , role : 'Networking' ,logo: "img/cisco.png"  };  
    $scope.u5={ name  : 'Nooruddin' , contact : '055-7754759' , role : 'IBM Cloud' ,logo: "img/ibm.png"  };
    $scope.u6={ name  : 'Vijay' , contact : '052-5790357' , role : 'Open Stack' ,logo: "img/openstack.jpg"  };
+   $scope.u7={ name  : 'Ramesh' , contact : '052-8841491' , role : 'VMWare' ,logo: "img/vmware.png"  };
+
 
    $scope.m1={ name  : 'Cloud Lab Planning' , when : '17-Dec 10am'  };
    $scope.m2={ name  : 'Cloud Network Workshop' , when : '28-Dec 10am'  };

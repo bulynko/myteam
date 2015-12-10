@@ -26,7 +26,7 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
  
    $scope.u1={ name  : 'Marcin' , contact : '050-7483280' , role : 'Tech Lead' ,logo: "img/openstack.jpg"  };
    $scope.u2={ name  : 'Sheniyas' , contact : '050-1213838' , role : 'Linux' ,logo: "img/red-hat-logo.jpg"  };    
-   $scope.u3={ name  : 'Suraj' , contact : '055-3323342', role : '' , logo: "img/login-page-logo.png"  };    
+   $scope.u3={ name  : 'Suraj' , contact : '055-3323342', role : 'GBM Cloud' , logo: "img/login-page-logo.png"  };    
    $scope.u4={ name  : 'Adnan' , contact : '050-1291428' , role : 'Networking' ,logo: "img/cisco.png"  };  
    $scope.u5={ name  : 'Nooruddin' , contact : '055-7754759' , role : 'IBM Cloud' ,logo: "img/ibm.png"  };
    $scope.u6={ name  : 'Vijay' , contact : '052-5790357' , role : 'Open Stack' ,logo: "img/openstack.jpg"  };
