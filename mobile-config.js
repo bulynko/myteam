@@ -1,5 +1,5 @@
 App.info({
-  id: 'com.sheniyas.app',
+  id: 'com.sheniyas.booking',
   name: 'myteam',
   description: 'G-Cloud Mobile App',
   author: 'G-Cloud Team',
