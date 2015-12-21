@@ -8,58 +8,143 @@ md-tab-item {
 
 /*  Login Page Header Title */
 .loginheadertitle {
-        margin: 0px 0px 0px 0px;
+	display: block;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: -10%;
+        margin-right: auto;
         color: #ffffff;
         text-align: center;
         font-family: 'Raleway', sans-serif;
-        font-weight: 100;
-        font-size: 24px;
-        /* font: 24px arial, sans-serif; */
-        /* margin-top: 20px; */
-
-}
-
-md-radio-button.md-checked .md-off {
-    border-color: blue !important;
-    border-top-color: blue !important;
-    border-right-color: rgba(255, 64, 129, 0.87);
-    border-bottom-color: rgba(255, 64, 129, 0.87);
-    border-left-color: rgba(255, 64, 129, 0.87);
-}
-
-md-radio-button.md-checked .md-testing  {
-    border-color: green !important;
-    border-top-color: green !important;
-    border-right-color: rgba(255, 64, 129, 0.87);
-    border-bottom-color: rgba(255, 64, 129, 0.87);
-    border-left-color: rgba(255, 64, 129, 0.87);
+        font-weight: 400;
+        font-size: 20px;
 }
 
 md-radio-button.md-checked .md-off  {
-    border-color: green !important;
+    border-color: #6f2a8e !important;
 }
 
 md-radio-button.md-default-theme, md-radio-button .md-on {
-    background-color: blue;
+    background-color: #6f2a8e;
+}
+
+myteam-color {
+color: #6f2a8e;
 }
 
 .loginlogo img{
-        margin: 30px 0px 0px 5px;
-	height: 122px;
-	width: 200px;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;	
+    height: 87px;
+    width: 144px;
+}
+
+.equinixlogo img{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;	
+    height: 70px;
+    width: 144px;
+}
+
+.datacenterlogo img{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;	
+    height: 127px;
+    width: 270px;
+}
+
+
+.cloud-design img{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;	
+    height: auto;
+    width: 360px;
+}
+
+.network-design img{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    height: auto;
+    width: 360px;
+}
+
+.rack-design img{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    height: auto;
+    width: 360px;
+}
+
+.map1 img{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    height: auto;
+    width: 360px;
+}
+
+.map2 img{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    height: auto;
+    width: 360px;
+}
+
+.map3 img{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    height: auto;
+    width: 360px;
+}
+
+.neutron img{
+   display: block;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left:auto;
+    margin-right:auto;	
+    height: 250px;
+    width: 280px;
 }
 
 /*  Login Page Title */
-.logintitle {
-        margin: 40px 0px 0px 5px;
-        color: #6a747c;
-        text-align: center;
-        font-family: 'Raleway', sans-serif;
-        font-weight: bold;
-        font-size: 22px;
-        /* font: 24px arial, sans-serif; */
-        /* margin-top: 20px; */
-
+.centre {
+	display: block;
+	margin-top: 0px;
+        margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	color: #6a747c;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
 }
 
 

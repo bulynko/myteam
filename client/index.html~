@@ -18,7 +18,7 @@
           <md-menu-content width="2">
 
            <md-menu-item ng>
-              <md-button >  About G-Cloud - 2015
+              <md-button >  About G-Cloud
               </md-button>
 	    <md-tooltip>
     		OpenStack Lab
@@ -50,7 +50,9 @@
 
   </md-toolbar>  <!-- Toolbar -->
 
+  <md-content flex>
   <div ui-view class="container-fluid">   </div> 
-   
+  </md-content>
+     
 </body>
 

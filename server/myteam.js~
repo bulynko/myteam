@@ -12,6 +12,6 @@ return Teams.find({});
 //     $or:[ {"player1": this.userId} ,
 //      {"player2": this.userId} ,
 //       {"player2": 'none'} ]
-    });
+//    });
 
 });

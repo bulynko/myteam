@@ -47,7 +47,7 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
 
     <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   -->
     <md-tab  >
-      <md-tab-label> Project Cloud
+      <md-tab-label> Project
              <md-icon md-svg-src="img/cloud-download.svg"></md-icon>
         </md-tab-label>
       <md-tab-body>

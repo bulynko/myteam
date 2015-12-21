@@ -1,6 +1,13 @@
 angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootScope', '$state', '$location',
   function($scope, $meteor, $rootScope, $state, $location){
 
+//    $scope.= $meteor.collection(Tasks).subscribe('tasks');
+
+     $meteor.collection(Tasks).subscribe('tasks');
+    $scope.tasks  = $meteor.collection(function() {
+    //  return Meetings.find({uid : $scope.currentUser._id }, { sort : 0});
+     return Tasks.find({ msgtarget : 'PUBLIC'  });
+    });   
 
    $meteor.session('projectDaysSession').bind($scope, 'mycounterD');
    $meteor.session('projectHrsSession').bind($scope, 'mycounterH');
@@ -8,7 +15,7 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
    $meteor.session('projectSecsSession').bind($scope, 'mycounterS');
 
     //projectTimecounter= moment(new Date());;
-    projectTimecounter= moment('2015-12-26');; 
+    projectTimecounter= moment('2016-01-03');
     Meteor.setInterval(Meteor.myFunctions.mytimer, 1000 );
 
     $scope.myteam = $meteor.collection(MyTeam).subscribe('myteam');

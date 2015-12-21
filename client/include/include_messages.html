@@ -1,4 +1,17 @@
 
+  
+   
+  <md-whiteframe ng-repeat="t in tasks" class="md-whiteframe-z3" layout 
+   layout-align="center center"  style="margin: 5px ; padding: 3px;">  
+     <div layout="column"> 
+         <h4>  <font color="red">   {{ t.message }} </font>  </h4>
+         <div class="myteam-color" >   {{ t.msgtime }}    from: {{ t.owner }}    </div>
+     </div>     
+         <span flex></span>     
+   </md-whiteframe> 
+
+
+
   <md-whiteframe class="md-whiteframe-z3" layout 
    layout-align="center center"  style="margin: 3px ; padding: 5px;">  
    
@@ -25,3 +38,6 @@
       </font></div>
      </div>
    </md-whiteframe>  
+   
+    
+   

@@ -7,11 +7,22 @@ angular.module("myteam").controller("cloudlabCtrl", ['$scope', '$stateParams', '
     $rootScope.loginFlag =2;  
     $scope.projectMgmt='4me';
 
+    $scope.req={ msgTarget: 'PUBLIC' };
+
 //    $scope.myteam = $meteor.collection(MyTeam).subscribe('myteam');
  //   $scope.teams = $meteor.collection(Teams).subscribe('teams');
 
-    $scope.tasks = $meteor.collection(Tasks).subscribe('tasks');
+     $meteor.collection(Tasks).subscribe('tasks');
 
+    $scope.tasks  = $meteor.collection(function() {
+    //  return Meetings.find({uid : $scope.currentUser._id }, { sort : 0});
+     return Tasks.find({ ownerid : $scope.currentUser._id  });
+    });   
+ 
+    $scope.tasksMember  = $meteor.collection(function() {
+    //  return Meetings.find({uid : $scope.currentUser._id }, { sort : 0});
+     return Tasks.find( { msgtarget : 'MEMBERS'  } );
+    });    
  
   //==========================================================================
         
@@ -43,8 +54,12 @@ angular.module("myteam").controller("cloudlabCtrl", ['$scope', '$stateParams', '
 
   if ( myreq != 'undefined')
   {
+  var msgtime= moment(new Date());
+  var msgtimeText=moment(msgtime).format('DD-MM-YY  HH:mm');
+  
   var msg = myreq.msg;
-   Tasks.insert({ tasktype : 'REQ', message: msg , status: 1, ownerid: u._id , owner: u.emails[0].address });
+  var msgtarget = myreq.msgTarget;
+   Tasks.insert({ tasktype : 'REQ', message: msg , status: 1, msgtarget:  msgtarget , msgtime : msgtimeText , ownerid: u._id , owner: u.emails[0].address });
    }
   };
 

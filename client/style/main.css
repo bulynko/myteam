@@ -28,6 +28,9 @@ md-radio-button.md-default-theme, md-radio-button .md-on {
     background-color: #6f2a8e;
 }
 
+.myteam-color {
+color: #6f2a8e;
+}
 
 .loginlogo img{
     display: block;
@@ -143,4 +146,5 @@ md-radio-button.md-default-theme, md-radio-button .md-on {
         font-weight: 600;
         font-size: 18px;
 }
+
 
