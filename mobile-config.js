@@ -1,6 +1,7 @@
 App.info({
   id: 'com.sheniyas.booking',
   name: 'myteam',
+  version: '0.1.1',
   description: 'G-Cloud Mobile App',
   author: 'G-Cloud Team',
   email: 'info@sheniyas.com',

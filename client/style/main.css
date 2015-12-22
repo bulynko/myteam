@@ -5,6 +5,17 @@ md-tab-item {
     border: 1px solid #e1e1e1; 
 }
 
+ md-whiteframe {
+/*   background: #f0f0f0; */
+    font-family: 'Raleway', sans-serif;
+    color: #333 !important;
+}
+
+.what {
+       
+    font-family: 'Raleway', sans-serif;
+    color: #333 !important;
+}
 
 /*  Login Page Header Title */
 .loginheadertitle {
@@ -140,10 +151,11 @@ color: #6f2a8e;
         margin-bottom: 0px;
 	margin-left: auto;
 	margin-right: auto;
-	color: #6a747c;
+/*	color: #6a747c; */
+	color: #333;
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 18px;
 }
 
