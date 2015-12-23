@@ -94,24 +94,19 @@
      
      <div layout="column"    ng-hide= "(  projectMgmt != 'TASKS' ) ">     
         <h1> tasks .... </h1>
- =========
+
     <md-whiteframe ng-repeat="t in tasksMember" class="md-whiteframe-z3" layout 
    layout-align="center center"  style="margin: 5px ; padding: 3px;">  
      <div> 
       <h4>  {{ t.message }} id: {{ t.owner }}   </h4>
      [ {{ t.msgtarget }} ]   {{ t.msgtime }}
-            
-     </div>   
-      
+     </div>        
      <span flex></span>  
-
-        
+     
     </md-whiteframe>   
    
    
-   
-   
-========   
+
      </div>          
 
      <div layout="column"    ng-hide= "(  projectMgmt != '4me' ) ">     

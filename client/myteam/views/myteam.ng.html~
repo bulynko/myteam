@@ -21,7 +21,7 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
       <md-input-container> 
 
   <md-radio-group ng-model="theproject" layout="raw" >
-      <div  ng-repeat="projectInfo in ['WHAT','WHERE','WHO']"   layout="column"  >
+      <div class="myteam-color" ng-repeat="projectInfo in ['WHAT','WHERE','WHO']"   layout="column"  >
       <md-radio-button  ng-value="projectInfo"   layout="row"  >      
           {{ projectInfo }}   
       </md-radio-button >      
@@ -90,9 +90,7 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
 
    </form>      
   </div>          
-        
-   
-   
+           
     </md-input-container>       
     </md-tab-body> 
     </md-tab>    

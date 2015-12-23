@@ -33,7 +33,7 @@
 
  <md-input-container  layout="flex"  >     
   <md-radio-group ng-model="projectMgmt" layout="raw" >
-      <div  ng-repeat="projectActions in ['REQUESTS','TASKS','4me']"   layout="column"  >
+      <div  class="myteam-color"   ng-repeat="projectActions in ['REQUESTS','TASKS','4me']"   layout="column"  >
       <md-radio-button  ng-value="projectActions"  layout="row" >      
           {{ projectActions }}   
       </md-radio-button >      
@@ -55,7 +55,7 @@
     
 
       <md-radio-group ng-model="req.msgTarget" layout="column" >
-      <div  ng-repeat="msgTarget in ['PUBLIC','PRIVATE','MEMBERS']"  >
+      <div  class="myteam-color"  ng-repeat="msgTarget in ['PUBLIC','PRIVATE','MEMBERS']"  >
       <md-radio-button  ng-value="msgTarget"   layout="row"  >      
           {{ msgTarget }}   
       </md-radio-button >      
@@ -74,7 +74,7 @@
      [ {{ t.msgtarget }} ]   {{ t.msgtime }}
             
       <md-radio-group ng-model="t.msgtarget"   layout="row" >
-      <div  ng-repeat="msgTarget in ['PUBLIC','PRIVATE','MEMBERS']"    layout="row" >
+      <div   ng-repeat="msgTarget in ['PUBLIC','PRIVATE','MEMBERS']"    layout="row" >
       <md-radio-button  ng-value="msgTarget"  >      
       </md-radio-button >      
        </div>
