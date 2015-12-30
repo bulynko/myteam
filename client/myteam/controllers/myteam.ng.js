@@ -43,9 +43,9 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
    $scope.m1={ name  : 'Cloud Lab Planning' , when : '17-Dec 10am'  };
    $scope.m2={ name  : 'Cloud Network Workshop' , when : '28-Dec 10am'  };
    
-    $scope.p3= { phasename :'Project  Started' , info : '1-NOV-2015' };
-    $scope.p2= { phasename :'Equipment Ordered' , info : '24-NOV-2015' };
-    $scope.p1= { phasename :'Planning Phase ' , info : 'in progress' };
+    $scope.p3= { phasename :'Project  Started' , info : '1-NOV-2015' ,logo: "img/ok.png" };
+    $scope.p2= { phasename :'Equipment Ordered' , info : '24-NOV-2015' ,logo: "img/ok.png" };
+    $scope.p1= { phasename :'Planning Phase ' , info : 'in progress' ,logo: "img/work.png" };
     
   //======================================================================
 
