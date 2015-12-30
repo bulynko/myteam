@@ -15,7 +15,7 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
    $meteor.session('projectSecsSession').bind($scope, 'mycounterS');
 
     //projectTimecounter= moment(new Date());;
-    projectTimecounter= moment('2016-01-03');
+    projectTimecounter= moment('2016-01-08');
     Meteor.setInterval(Meteor.myFunctions.mytimer, 1000 );
 
     $scope.myteam = $meteor.collection(MyTeam).subscribe('myteam');
