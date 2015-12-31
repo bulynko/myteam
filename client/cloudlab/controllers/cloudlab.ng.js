@@ -24,6 +24,12 @@ angular.module("myteam").controller("cloudlabCtrl", ['$scope', '$stateParams', '
      return Tasks.find( { msgtarget : 'MEMBERS'  } );
     });    
  
+    $scope.tasksMy  = $meteor.collection(function() {
+    //  return Meetings.find({uid : $scope.currentUser._id }, { sort : 0});
+     return Tasks.find( { $and:[ { msgtarget : 'PRIVATE'  } , { ownerid : $scope.currentUser._id  } ] } );
+    });  
+ 
+ 
   //==========================================================================
         
  $scope.changePassword = function(uid,myuser) {

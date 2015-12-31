@@ -1,5 +1,5 @@
-angular.module("myteam").controller("loginCtrl", ['$scope', '$meteor', '$rootScope', '$state',
-  function($scope, $meteor, $rootScope, $state){
+angular.module("myteam").controller("loginCtrl", ['$scope', '$meteor', '$rootScope', '$state','$mdDialog',
+  function($scope, $meteor, $rootScope, $state,$mdDialog){
  
    console.log(" Login-Controller..... ");
    Meteor.logout();  
@@ -38,7 +38,29 @@ angular.module("myteam").controller("loginCtrl", ['$scope', '$meteor', '$rootSco
      
   };
 
-}
+//---------------------------------------
+ 
+  
+  //-------------------------------------------------------------------------
 
-]);
+    $scope.openAboutDialog = function(){
+
+      $mdDialog.show({
+       // controller: 'AddNewPartyCtrl',
+        templateUrl: 'client/include/include_about.html',
+        clickOutsideToClose:true,
+      })
+    };
+//-------------------------------------------------
+    $scope.openVerstionDialog = function(){
+
+      $mdDialog.show({
+        templateUrl: 'client/include/include_verstion.html',
+        clickOutsideToClose:true,
+      })
+    };
+//-------------------------------------------------
+
+
+}]);
 

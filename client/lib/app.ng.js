@@ -1,7 +1,8 @@
 angular.module('myteam',[
   'angular-meteor',
   'ui.router',
-  'ngMaterial'
+  'ngMaterial',
+  'ngAnimate'
 ])
 
 
@@ -41,6 +42,9 @@ Meteor.startup(function() {
     Session.set("myteamtag", localStorage.getItem("myteamtag"));
    // process.env.NODE_TLS_REJECT_UNAUTHORIZED= "0" ;    
 });
+
+
+
 
 Meteor.myFunctions = { 
 
@@ -89,7 +93,9 @@ mytimer: function()
   Session.set('projectMinsSession', mycounterM); 
   Session.set('projectSecsSession', mycounterS); 
  // timerVar.insert( { status: 'OK', name: 'Tom' });
-}
+},
+
+
 
 }
 

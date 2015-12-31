@@ -18,3 +18,4 @@ momentjs:moment
 accounts-password
 urigo:angular
 angular:angular-material
+angular:angular-animate

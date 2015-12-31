@@ -71,11 +71,36 @@
       <md-tab-label> System
              <md-icon md-svg-src="img/cloud-download.svg"></md-icon>
         </md-tab-label>
-      <md-tab-body>
+   
+     <md-tab-body>
 
      <h3>  Settings ,  Alerts, .......</h3>  
  
-         
+     <center> <h3 class="myteam-color"> TASK LIST </h3></center>
+
+   <md-whiteframe ng-repeat="t in alltasks" class="md-whiteframe-z3" layout 
+   layout-align="center center"  style="margin: 5px ; padding: 3px;">  
+   
+     <div> 
+      <h4>  {{ t.message }} id: {{ t.owner }}   </h4>
+     [ {{ t.msgtarget }} ]   {{ t.msgtime }}
+            
+      <md-radio-group ng-model="t.msgtarget"   layout="row" >
+      <div   ng-repeat="msgTarget in ['PUBLIC','PRIVATE','MEMBERS']"    layout="row" >
+      <md-radio-button  ng-value="msgTarget"  >      
+      </md-radio-button >      
+       </div>
+     </md-radio-group>     
+ 
+     </div>   
+      
+     <span flex></span>  
+     <div  align="right"  >
+       <md-button class="md-raised md-primary"  ng-click="removeRequest(t._id) " >X</md-button>   
+      </div> 
+        
+    </md-whiteframe>          
+   
       
     </md-tab-body> 
     </md-tab>    

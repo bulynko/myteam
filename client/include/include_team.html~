@@ -1,10 +1,10 @@
-  <md-whiteframe ng-repeat="u in [ u1, u2, u3 ,u4 , u5 , u6]" class="md-whiteframe-z3" layout 
-   layout-align="center center"  style="margin: 3px ; padding: 5px;">  
+  <md-whiteframe  ng-repeat="u in [ u1, u2, u3 ,u4 , u5 , u6 ,u7]" class="md-whiteframe-z3 fade" layout 
+   layout-align="center center"  style="margin: 3px ; padding: 5px;" >  
    
-     <div>    <h3> {{ u.name }} </h3> - {{ u.role }}  </div>    
+     <div> <h3 class="myteam-color" > {{ u.name }} </h3> - {{ u.role }}  </div>    
 
      <span flex></span> 
      <div><img src="{{ u.logo}}" style="width:60px" /></div>  
-     <div  align="right"  >  {{ u.contact }}   </div>
+     <div  align="right"  > <a ng-href="tel: {{ u.contact }}" style="text-decoration:none; color:#6f2a8e" > {{ u.contact }}  </a>   </div>
 
    </md-whiteframe>  

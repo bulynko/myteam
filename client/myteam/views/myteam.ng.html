@@ -28,11 +28,13 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
        </div>
      </md-radio-group>
         
-     <div layout="column"    ng-hide= "(  theproject != 'WHAT' ) ">     
+        
+        
+     <div layout="column"  class="fade"   ng-hide= "(  theproject != 'WHAT' ) ">     
         <div ng-app="" ng-include="'client/include/include_overview.html'"></div>
      </div>     
         
-     <div layout="column"    ng-hide= "(  theproject != 'WHERE' ) ">   
+     <div layout="column"  class="fade"   ng-hide= "(  theproject != 'WHERE' ) ">   
        <div ng-app="" ng-include="'client/include/include_location.html'"></div>
        </div>    
     

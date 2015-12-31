@@ -6,10 +6,11 @@ angular.module("myteam").controller("adminCtrl", ['$scope', '$stateParams', '$me
 
     $rootScope.loginFlag =3; 
 
-    $scope.myteam = $meteor.collection(MyTeam).subscribe('myteam');
-    $scope.teams = $meteor.collection(Teams).subscribe('teams');
-
     $scope.users = $meteor.collection(Meteor.users, false).subscribe('users');
+  
+    $scope.alltasks  =   $meteor.collection(Tasks).subscribe('tasks');
+
+   
   
  //==========================================================================
     
@@ -76,6 +77,14 @@ angular.module("myteam").controller("adminCtrl", ['$scope', '$stateParams', '$me
   	  Meteor.call("removeUser",uid);  
 
   }; 
+  
+//--------------------------------
+
+   $scope.removeRequest  = function(tid) {
+   Tasks.remove(tid);
+  };
+  
+  //------------------------------------  
   
     
  }]);

@@ -33,7 +33,7 @@
 
  <md-input-container  layout="flex"  >     
   <md-radio-group ng-model="projectMgmt" layout="raw" >
-      <div  class="myteam-color"   ng-repeat="projectActions in ['REQUESTS','TASKS','4me']"   layout="column"  >
+      <div  class="myteam-color"   ng-repeat="projectActions in ['TASKS','4team','4me']"   layout="column"  >
       <md-radio-button  ng-value="projectActions"  layout="row" >      
           {{ projectActions }}   
       </md-radio-button >      
@@ -44,16 +44,20 @@
    
    <md-divider ng-if="!$last"></md-divider>
    
-     <div layout="column"    ng-hide= "(  projectMgmt != 'REQUESTS' ) ">   
+     <div layout="column"    ng-hide= "(  projectMgmt != 'TASKS' ) ">   
 
         
-     <form>   
-     <md-input-container  style="padding: 10px">
-       <label>Request</label>
+     <form>
+     <md-whiteframe class="md-whiteframe-z3" layout   layout-align="center center" 
+        style="margin: 5px ; padding: 5px;">  
+     
+     <div layout="column"  style="width:95%"> 
+     <md-input-container  style="padding: 10px;margin: 10px">
+       <label>New Task</label>
        <input ng-model="req.msg" type="text" ng-minlength="5" required>
      </md-input-container>
-    
 
+         
       <md-radio-group ng-model="req.msgTarget" layout="column" >
       <div  class="myteam-color"  ng-repeat="msgTarget in ['PUBLIC','PRIVATE','MEMBERS']"  >
       <md-radio-button  ng-value="msgTarget"   layout="row"  >      
@@ -61,10 +65,19 @@
       </md-radio-button >      
        </div>
      </md-radio-group>    
-    
+
+ 
       <md-button class="md-raised md-primary"  ng-click="createRequest(req,currentUser)" 
-       align="center"> Create Request </md-button> 
+       align="center"> Create New Task </md-button>
+      
+      </div>  
+     
+      </md-whiteframe>   
      </form>  
+
+
+        
+   <center> <h3 class="myteam-color"> OPEN TASK LIST </h3></center>
 
    <md-whiteframe ng-repeat="t in tasks" class="md-whiteframe-z3" layout 
    layout-align="center center"  style="margin: 5px ; padding: 3px;">  
@@ -92,8 +105,8 @@
      </div>  
      
      
-     <div layout="column"    ng-hide= "(  projectMgmt != 'TASKS' ) ">     
-        <h1> tasks .... </h1>
+     <div layout="column"    ng-hide= "(  projectMgmt != '4team' ) ">     
+        <h1 class="myteam-color"> Team tasks .... </h1>
 
     <md-whiteframe ng-repeat="t in tasksMember" class="md-whiteframe-z3" layout 
    layout-align="center center"  style="margin: 5px ; padding: 3px;">  
@@ -110,7 +123,17 @@
      </div>          
 
      <div layout="column"    ng-hide= "(  projectMgmt != '4me' ) ">     
-        <h1> my work .... </h1>
+        <h1 class="myteam-color"> My work tasks.... </h1>
+     <md-whiteframe ng-repeat="t in tasksMy" class="md-whiteframe-z3" layout 
+      layout-align="center center"  style="margin: 5px ; padding: 3px;">  
+     <div> 
+      <h4>  {{ t.message }} id: {{ t.owner }}   </h4>
+     [ {{ t.msgtarget }} ]   {{ t.msgtime }}
+     </div>        
+     <span flex></span>  
+     
+    </md-whiteframe>     
+        
      </div>      
            
     </md-tab-body> 

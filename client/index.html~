@@ -9,29 +9,28 @@
 <body>
 
   <md-toolbar  md-scroll-shrink layout="row" layout-align="start center" layout-padding>
-       
- 
+    
       <md-menu md-offset="0 -7">
           <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
              <md-icon md-svg-src="img/menu-icon.svg" aria-label="Icon"></md-icon>
           </md-button>
           <md-menu-content width="2">
 
+	       <div ng-controller="loginCtrl">
            <md-menu-item ng>
-              <md-button >  About G-Cloud
+              <md-button  ng-click="openAboutDialog()" >  About G-Cloud
               </md-button>
-	    <md-tooltip>
-    		OpenStack Lab
-  	    </md-tooltip>
+	           <md-tooltip> OpenStack Lab </md-tooltip>
            </md-menu-item> 
+         </div>            
             
 	    <md-menu-divider></md-menu-divider>
+	       <div ng-controller="loginCtrl">
             <md-menu-item ng>
-              <md-button >  Version </md-button>
-            <md-tooltip>
-              G-Cloud App 0.1
-            </md-tooltip>
+              <md-button  ng-click="openAboutDialog()">  Version </md-button>
+            <md-tooltip> G-Cloud App 0.1 </md-tooltip>
 	    </md-menu-item>
+       </div>
           
 	    <md-menu-divider></md-menu-divider>
 	    <div class="container" ng-if=" ( loginFlag != 0)">
@@ -50,9 +49,9 @@
 
   </md-toolbar>  <!-- Toolbar -->
 
-  <md-content flex>
+
   <div ui-view class="container-fluid">   </div> 
-  </md-content>
+
      
 </body>
 

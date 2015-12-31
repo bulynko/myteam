@@ -3,7 +3,7 @@
    
   <md-whiteframe ng-repeat="t in tasks" class="md-whiteframe-z3" layout 
    layout-align="center center"  style="margin: 5px ; padding: 3px;">  
-     <div layout="column"> 
+     <div layout="column" align="middle"> 
          <h4>  <font color="red">   {{ t.message }} </font>  </h4>
          <div class="myteam-color" >   {{ t.msgtime }}    from: {{ t.owner }}    </div>
      </div>     
@@ -15,11 +15,11 @@
   <md-whiteframe class="md-whiteframe-z3" layout 
    layout-align="center center"  style="margin: 3px ; padding: 5px;">  
    
-     <div layout="column" lign="middle">   
+     <div layout="column" align="middle">   
       <div>      
-      <h3> HW Delivery time counter </h3>  </div>    
+      <h3>  <font color="red">  HW Delivery time counter </font> </h3>  </div>    
        
-     <div  align="middle"  > <font color="red">     
+     <div  align="middle"  > <font class="myteam-color">     
      <h4>days: {{ mycounterD }}    time: {{ mycounterH }}:{{ mycounterM }}:{{ mycounterS }} </h4>  
       </font></div>
      </div>
@@ -29,11 +29,11 @@
    <md-whiteframe class="md-whiteframe-z3" layout 
    layout-align="center center"  style="margin: 3px ; padding: 5px;">  
    
-     <div layout="column" lign="middle">   
+     <div layout="column" align="middle">   
       <div>      
-      <h3> GBM Cloud Build time counter </h3>  </div>    
+      <h3>  <font color="red">  GBM Cloud Build time counter </font> </h3>  </div>    
        
-     <div  align="middle"  > <font color="red">     
+     <div  align="middle"  > <font class="myteam-color">     
      <h4> NOT started yet ... </h4>  
       </font></div>
      </div>
