@@ -97,6 +97,7 @@
       
      <span flex></span>  
      <div  align="right"  >
+       <md-button class="md-raised md-primary"  ng-click="copyRequest(t.message) " >Copy</md-button>   
        <md-button class="md-raised md-primary"  ng-click="removeRequest(t._id) " >X</md-button>   
       </div> 
         

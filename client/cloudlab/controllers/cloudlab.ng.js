@@ -73,6 +73,10 @@ angular.module("myteam").controller("cloudlabCtrl", ['$scope', '$stateParams', '
    Tasks.remove(tid);
   };
 
+   $scope.copyRequest  = function(msg) {
+    $scope.req.msg=msg;
+  };
+  
  //==========================================================================
 
     
