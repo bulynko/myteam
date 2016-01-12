@@ -9,7 +9,8 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
 <div layout="column"    ng-hide= "( ! currentUser ) ">     
  <md-button  class="md-raised md-primary"   href="/cloudlab" > Member </md-button>
 </div>
-
+ server-time {{ serverTime }}
+ 
  <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always"  md-selected="selectedIndex" >
     <md-tab   >
         <md-tab-label > Info
@@ -31,6 +32,7 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
         
         
      <div layout="column"  class="fade"   ng-hide= "(  theproject != 'WHAT' ) ">     
+        
         <div ng-app="" ng-include="'client/include/include_overview.html'"></div>
      </div>     
         
@@ -74,20 +76,20 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
      </div>        
 
      <div layout="column"    ng-hide= "(  projectMgmt != 'MEMBER' ) ">
-    
    <form>      
+    
     <md-input-container  style="padding: 15px ">
-      <label>Login email</label>
       <input ng-model="myuser.email"  type="email">
     </md-input-container>
     <md-input-container  style="padding: 15px ">
+      <label>Login email</label>
       <label>Password</label>
       <input ng-model="myuser.pass" type="password">
-    </md-input-container>
     
        <md-button class="md-raised md-primary"  ng-click="memberLogin(myuser)" >
         MEMBER LOGIN </md-button>
 
+    </md-input-container>
   <font color="red">{{ loginErrorMessage }} </font>
 
    </form>      

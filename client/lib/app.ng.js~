@@ -95,6 +95,19 @@ mytimer: function()
  // timerVar.insert( { status: 'OK', name: 'Tom' });
 },
 
+myscheduler: function()
+{
+   console.log(" calling server .... "); 
+   //$scope,keepAliveStauts="On-line ";
+ 
+     Meteor.call('keepAlive' , function(error, result){
+  //   Session.set('serverTimeSession', result[0]); 
+    Session.set('serverTimeSession', 'result'); 
+    // $scope.titleMeeting="Team Meeting";
+     console.log(" Meteor.call keepAlive , result: "+ result);   
+  }); 
+},
+
 
 }
 

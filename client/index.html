@@ -6,10 +6,11 @@
 
 </head>
 
-<body>
+<body layout="column">
 
-  <md-toolbar  md-scroll-shrink layout="row" layout-align="start center" layout-padding>
-    
+ 
+  <md-toolbar  layout="row" layout-align="start center" layout-padding >
+   <div class="md-toolbar-tools">     
       <md-menu md-offset="0 -7">
           <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
              <md-icon md-svg-src="img/menu-icon.svg" aria-label="Icon"></md-icon>
@@ -41,16 +42,16 @@
           
 	    </md-menu-content>
           </md-menu>
-            
-       
+                  
     <span flex> <div class=loginheadertitle align="center">  G-Cloud Team  </div> </span>   
   
-
-
+  </div>
   </md-toolbar>  <!-- Toolbar -->
 
+  <md-content layout="column" flex>
+    <div ui-view layout-fill class="container-fluid">   </div> 
+  </md-content>
 
-  <div ui-view class="container-fluid">   </div> 
 
      
 </body>
