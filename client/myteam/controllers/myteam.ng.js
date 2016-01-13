@@ -13,17 +13,19 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
    $meteor.session('projectHrsSession').bind($scope, 'mycounterH');
    $meteor.session('projectMinsSession').bind($scope, 'mycounterM');
    $meteor.session('projectSecsSession').bind($scope, 'mycounterS');
-   $meteor.session('serverTimeSession').bind($scope, 'serverTime');
+   $meteor.session('serverPingSession').bind($scope, 'serverPing');
+   $meteor.session('serverConnectionSession').bind($scope, 'serverConnection');
 
-
-   $scope.serverTime="TEST";
+   $scope.serverConnection='green';
+   $scope.serverPing=4;
 
     //projectTimecounter= moment(new Date());;
     projectTimecounter= moment('2016-01-08');
     Meteor.setInterval(Meteor.myFunctions.mytimer, 1000 );
 
-    serverTime= moment('2016-01-08');
-    Meteor.setInterval(Meteor.myFunctions.myscheduler, 1300 );
+    //serverTime= moment('2016-01-08');
+    serverPingConnection=3;
+    Meteor.setInterval(Meteor.myFunctions.myscheduler, 2200 );
 
 
     $scope.myteam = $meteor.collection(MyTeam).subscribe('myteam');

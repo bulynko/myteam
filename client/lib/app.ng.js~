@@ -66,7 +66,7 @@ for (var i = 0; i < persons.length; i++) {
 mytimer: function()
 {
 
-  console.log(" timer message .... ")+projectTimecounter;
+  //console.log(" timer message .... ")+projectTimecounter;
   
  projectTimecounter=projectTimecounter;
 
@@ -97,13 +97,25 @@ mytimer: function()
 
 myscheduler: function()
 {
-   console.log(" calling server .... "); 
-   //$scope,keepAliveStauts="On-line ";
+    console.log(" calling server .... "+serverPingConnection); 
+
+
+ if ( serverPingConnection > -10 )
+ serverPingConnection=serverPingConnection-2;
+
+ connection='yellow';
+ if ( serverPingConnection < 0 ) connection='red';
+ if ( serverPingConnection > 5 ) connection='green';
  
+ Session.set('serverConnectionSession', connection) ; 
+
+
+ Session.set('serverPingSession', serverPingConnection) ; 
+   
      Meteor.call('keepAlive' , function(error, result){
-  //   Session.set('serverTimeSession', result[0]); 
-    Session.set('serverTimeSession', 'result'); 
-    // $scope.titleMeeting="Team Meeting";
+      Session.set('serverPingSession', result[0]); 
+      serverPingConnection=result[0];
+      
      console.log(" Meteor.call keepAlive , result: "+ result);   
   }); 
 },

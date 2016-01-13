@@ -16,12 +16,12 @@ Meteor.methods({
 
     //console.log(" calling Meteor-Method keepAlive !")  ;
    
-     serverTime= moment(new Date());
-     serverTimeID= 99;
+    // var serverTime= moment(new Date());
+     var serverTimeID= 10;
 
-     console.log(" calling Meteor-Method keepAlive.....  time:" + serverTime )  ;
+      console.log(" calling Meteor-Method keepAlive.....   id:"+serverTimeID )  ;
      
-      return [  serverTime, serverTimeID ] ; 
+      return [  serverTimeID  ] ; 
     },
 
   
