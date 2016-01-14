@@ -123,3 +123,11 @@ myscheduler: function()
 
 }
 
+
+
+Meteor.startup(function() {
+    Session.set("useridSession", localStorage.getItem("userid"));
+    Session.set("usernameSession", localStorage.getItem("usernameSession"));
+    
+});
+

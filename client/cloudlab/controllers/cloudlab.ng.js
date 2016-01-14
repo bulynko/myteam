@@ -3,6 +3,8 @@ angular.module("myteam").controller("cloudlabCtrl", ['$scope', '$stateParams', '
 
  
     console.log(" Controller for cloud lab ..... ");
+    localStorage.setItem("userid",  $scope.currentUser._id);    	
+    localStorage.setItem("username",  $scope.currentUser.emails[0].address);    	 
 
     $rootScope.loginFlag =2;  
     $scope.projectMgmt='4me';

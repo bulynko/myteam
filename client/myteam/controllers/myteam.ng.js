@@ -1,7 +1,18 @@
 angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootScope', '$state', '$location',
   function($scope, $meteor, $rootScope, $state, $location){
 
-//    $scope.= $meteor.collection(Tasks).subscribe('tasks');
+   $scope.useridDev = localStorage.getItem("userid");
+   $scope.usernameDev = localStorage.getItem("username");
+
+   $scope.myuser={'email': $scope.usernameDev}; 
+
+ if (( typeof $scope.usernameDev === 'undefined') || ($scope.usernameDev == null))    
+    {
+    	 $scope.myuser={'email': ''}; 
+    }
+
+
+
 
      $meteor.collection(Tasks).subscribe('tasks');
     $scope.tasks  = $meteor.collection(function() {

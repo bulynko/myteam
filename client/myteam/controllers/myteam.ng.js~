@@ -1,7 +1,18 @@
 angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootScope', '$state', '$location',
   function($scope, $meteor, $rootScope, $state, $location){
 
-//    $scope.= $meteor.collection(Tasks).subscribe('tasks');
+   $scope.useridDev = localStorage.getItem("userid");
+   $scope.usernameDev = localStorage.getItem("username");
+
+   $scope.myuser={'email': $scope.usernameDev}; 
+
+// if (( typeof $scope.mygamexotag === 'undefined') || ($scope.mygamexotag == null))    
+ //   {
+ //   	 $scope.myuser={'email': ''}; 
+ //   }
+
+
+
 
      $meteor.collection(Tasks).subscribe('tasks');
     $scope.tasks  = $meteor.collection(function() {
@@ -25,7 +36,7 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
 
     //serverTime= moment('2016-01-08');
     serverPingConnection=3;
-    Meteor.setInterval(Meteor.myFunctions.myscheduler, 1600 );
+    Meteor.setInterval(Meteor.myFunctions.myscheduler, 2200 );
 
 
     $scope.myteam = $meteor.collection(MyTeam).subscribe('myteam');
