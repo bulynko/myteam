@@ -6,8 +6,7 @@
 
 </head>
 
-<body layout="column">
-
+<body>
  
   <md-toolbar  layout="row" layout-align="start center" layout-padding >
    <div class="md-toolbar-tools">     
@@ -49,7 +48,7 @@
   </md-toolbar>  <!-- Toolbar -->
 
   <md-content layout="column" flex>
-    <div ui-view layout-fill>   </div> 
+    <div ui-view layout-fill class="container-fluid">   </div> 
   </md-content>
 
 

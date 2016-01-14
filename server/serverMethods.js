@@ -19,7 +19,7 @@ Meteor.methods({
     // var serverTime= moment(new Date());
      var serverTimeID= 10;
 
-      console.log(" calling Meteor-Method keepAlive.....   id:"+serverTimeID )  ;
+     // console.log(" calling Meteor-Method keepAlive.....   id:"+serverTimeID )  ;
      
       return [  serverTimeID ,'OK' ] ; 
     },

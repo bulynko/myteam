@@ -114,15 +114,13 @@ myscheduler: function()
    
      Meteor.call('keepAlive' , function(error, result){
       Session.set('serverPingSession', result[0]); 
-      serverPingConnection=result[0];
-      
+      serverPingConnection=result[0];      
      console.log(" Meteor.call keepAlive , result: "+ result);   
   }); 
-},
+}
 
 
 }
-
 
 
 Meteor.startup(function() {
