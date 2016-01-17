@@ -21,9 +21,9 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
 
       <md-input-container> 
 
-  <md-radio-group ng-model="theproject" layout="raw" >
-      <div class="myteam-color" ng-repeat="projectInfo in ['WHAT','WHERE','WHO']"   layout="column"  >
-      <md-radio-button  ng-value="projectInfo"   layout="row"  >      
+  <md-radio-group ng-model="theproject" layout="raw" style="padding:5px;" >
+      <div class="myteam-color" ng-repeat="projectInfo in ['WHAT','WHERE','WHO']"  layout="column"  >
+      <md-radio-button  ng-value="projectInfo"   layout="row" style="padding-right:15px;"  >      
           {{ projectInfo }}   
       </md-radio-button >      
        </div>
@@ -58,9 +58,9 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
 
  <md-input-container  layout="column"  >
       
-  <md-radio-group ng-model="projectMgmt" layout="raw" >
+  <md-radio-group ng-model="projectMgmt" layout="raw"  style="padding:5px;">
       <div   class="myteam-color" ng-repeat="projectActions in ['STATUS','MSG','MEMBER']"   layout="column"  >
-      <md-radio-button  ng-value="projectActions"  layout="row" >      
+      <md-radio-button  ng-value="projectActions"  layout="row" style="padding-right:15px;">      
           {{ projectActions }}   
       </md-radio-button >      
       </div>
@@ -76,25 +76,27 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
      </div>        
 
      <div layout="column"    ng-hide= "(  projectMgmt != 'MEMBER' ) ">
+     <form>
      <div layout="column"    ng-hide= "(  serverConnection != 'green' ) ">
-    <form>      
+       
     
-    <md-input-container  style="padding: 15px ">
+    <md-input-container class="center" style="padding: 15px ">
+      <label>Login email</label> 
       <input ng-model="myuser.email" type="email" >
     </md-input-container>
     <md-input-container  style="padding: 15px ">
-      <label>Login email</label>
       <label>Password</label>
       <input ng-model="myuser.pass" type="password">
     </md-input-container>
         
-       <md-button class="md-raised md-primary"  ng-click="memberLogin(myuser)"  align="middle">
+       <md-button class="md-raised md-primary center"  ng-click="memberLogin(myuser)"  >
         MEMBER LOGIN </md-button> 
 
-  <font color="red">{{ loginErrorMessage }} </font>
+ <div>  <font color="red">{{ loginErrorMessage }} </font> </div>
 
-   </form>      
-   </div>    
+        
+   </div>  
+    </form>  
      <center> <h2> <font color="{{serverConnection }}"> Server Connection [ {{ serverPing }} ] </font> </h2> </center>
   </div>          
            

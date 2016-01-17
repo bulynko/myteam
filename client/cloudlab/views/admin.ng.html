@@ -11,23 +11,24 @@
              <md-icon md-svg-src="img/cloud-print-outline.svg"></md-icon>
       </md-tab-label>
     <md-tab-body> 
-
-    <md-input-container style="padding: 10px" >
+    <div layout="column">
+     
+    <md-input-container style="padding: 7px" >
       <label>Login email</label>
       <input ng-model="newuser.email"  type="email">
     </md-input-container>
 
-    <md-input-container  style="padding: 10px">
+    <md-input-container  style="padding: 7px">
       <label>Password</label>
       <input ng-model="newuser.password" type="password">
     </md-input-container>
 
-    <md-input-container  style="padding: 10px">
+    <md-input-container  style="padding: 7px">
       <label>Password verification</label>
       <input ng-model="newuser.password2" type="password">
     </md-input-container>
     
-    <font color="red">{{ registerErrorMessage }} </font>
+    <a class="center"><font color="red">{{ registerErrorMessage }} </font> </a>
   
   <div layout="row">  
     <md-input-container  style="padding: 20px">
@@ -61,7 +62,7 @@
         
     </md-whiteframe>   
      
-    
+    </div>
    </md-tab-body> 
    </md-tab>
     
@@ -85,9 +86,9 @@
       <h4>  {{ t.message }} id: {{ t.owner }}   </h4>
      [ {{ t.msgtarget }} ]   {{ t.msgtime }}
             
-      <md-radio-group ng-model="t.msgtarget"   layout="row" >
+      <md-radio-group ng-model="t.msgtarget"   layout="row"  style="padding:5px;">
       <div   ng-repeat="msgTarget in ['PUBLIC','PRIVATE','MEMBERS']"    layout="row" >
-      <md-radio-button  ng-value="msgTarget"  >      
+      <md-radio-button  ng-value="msgTarget"  style="padding-right:15px;" >      
       </md-radio-button >      
        </div>
      </md-radio-group>     
