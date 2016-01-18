@@ -6,10 +6,10 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
 
    $scope.myuser={'email': $scope.usernameDev}; 
 
-// if (( typeof $scope.mygamexotag === 'undefined') || ($scope.mygamexotag == null))    
- //   {
- //   	 $scope.myuser={'email': ''}; 
- //   }
+ if (( typeof $scope.usernameDev === 'undefined') || ($scope.usernameDev == null))    
+    {
+    	 $scope.myuser={'email': ''}; 
+    }
 
 
 
@@ -64,9 +64,13 @@ angular.module("myteam").controller("myteamCtrl", ['$scope', '$meteor', '$rootSc
    $scope.m1={ name  : 'Cloud Lab Planning' , when : '17-Dec 10am'  };
    $scope.m2={ name  : 'Cloud Network Workshop' , when : '28-Dec 10am'  };
    
-    $scope.p3= { phasename :'Project  Started' , info : '1-NOV-2015' ,logo: "img/ok.png" };
-    $scope.p2= { phasename :'Equipment Ordered' , info : '24-NOV-2015' ,logo: "img/ok.png" };
-    $scope.p1= { phasename :'Planning Phase ' , info : 'in progress' ,logo: "img/work.png" };
+    $scope.p6= { phasename :'Project  Started' , info : '1-NOV-2015' ,logo: "img/ok.png" };
+    $scope.p5= { phasename :'Equipment Ordered' , info : '24-NOV-2015' ,logo: "img/ok.png" };
+    $scope.p4= { phasename :'Planning and LLD Phase' , info : '29-DEC-2015' ,logo: "img/ok.png" };
+    $scope.p3= { phasename :'HW installation at Equinix' , info : '21-JAN-2016' ,logo: "img/ok.png" };
+    $scope.p2= { phasename :'Network/Connectivity' , info : 'in progress' ,logo: "img/work.png" };
+    $scope.p1= { phasename :'System/RHEV installtion' , info : 'in progress' ,logo: "img/work.png" };
+         
     
   //======================================================================
 

@@ -19,7 +19,7 @@ loginFlag: {{ loginFlag }} {{ currentUser | displayName }}
     <md-tab-body> 
  <!-- {{  currentUser | displayName }} --> 
 
-      <md-input-container> 
+      <md-input-container  layout="column"> 
 
   <md-radio-group ng-model="theproject" layout="raw" style="padding:5px;" >
       <div class="myteam-color" ng-repeat="projectInfo in ['WHAT','WHERE','WHO']"  layout="column"  >
