@@ -47,11 +47,8 @@
   </div>
   </md-toolbar>  <!-- Toolbar -->
 
-  <md-content layout="column" flex>
-    <div ui-view layout-fill class="container-fluid">   </div> 
-  </md-content>
-
-
+  
+   <div ui-view class="container-fluid">   </div>
      
 </body>
 

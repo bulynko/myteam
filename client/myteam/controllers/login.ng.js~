@@ -52,10 +52,10 @@ angular.module("myteam").controller("loginCtrl", ['$scope', '$meteor', '$rootSco
       })
     };
 //-------------------------------------------------
-    $scope.openVerstionDialog = function(){
+    $scope.openVersionDialog = function(){
 
       $mdDialog.show({
-        templateUrl: 'client/include/include_verstion.html',
+        templateUrl: 'client/include/include_version.html',
         clickOutsideToClose:true,
       })
     };

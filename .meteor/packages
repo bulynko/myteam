@@ -16,6 +16,8 @@ angularui:angular-ui-router
 less
 momentjs:moment
 accounts-password
-urigo:angular
 angular:angular-animate
 angular:angular-material
+angular:angular
+urigo:angular
+angular-meteor-auth

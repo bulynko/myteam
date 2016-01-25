@@ -1,5 +1,6 @@
 angular.module('myteam',[
   'angular-meteor',
+  'angular-meteor.auth',
   'ui.router',
   'ngMaterial',
   'ngAnimate'
